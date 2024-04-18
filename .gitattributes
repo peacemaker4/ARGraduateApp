@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.so filter=lfs diff=lfs merge=lfs -text
+unity/AR/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
+unity/AR/Library/PackageCache/com.unity.burst@1.8.13/.Runtime/libburst-llvm-16.dylib filter=lfs diff=lfs merge=lfs -text
