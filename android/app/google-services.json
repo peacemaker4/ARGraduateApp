@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "656204592092",
+    "project_id": "argraduateapp",
+    "storage_bucket": "argraduateapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656204592092:android:66061cdbbf44c7b2811519",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ar_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy6Vlo7tLehFOS1m2fqclh6-v_KDjo5WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

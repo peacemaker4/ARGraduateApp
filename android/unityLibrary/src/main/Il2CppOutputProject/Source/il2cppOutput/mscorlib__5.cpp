@@ -1280,6 +1280,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* UInt64_Equals_mB642AC4A6A1261E0FB36D7F1F2D7
 IL2CPP_EXTERN_C const RuntimeMethod* UInt64_GetHashCode_m65D9FD0102B6B01BF38D986F060F0BDBC29B4F92_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UInt64_GetTypeCode_m7956F80F53129D3D863DFD8FAF69837B1F3217D6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UInt64_Parse_m2DAEE5CD43B2F1924677B3697E4C967229D1AB48_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UInt64_Parse_m5D07DDFA6DA8E3F85D6E07EAE33756AF742CBAB0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UInt64_Parse_mCA16202D9040B305FE0C7AE61B7E869A2817A75A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UInt64_System_IConvertible_ToBoolean_m811C71F9B4CE4CA2B6C97239179F6D93AD40F181_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UInt64_System_IConvertible_ToByte_m0AE15842DA243AAB6558589B45FAEDF930FFFCEE_RuntimeMethod_var;
@@ -25133,6 +25134,44 @@ IL2CPP_EXTERN_C  bool UInt64_TryFormat_m0A81EA0B51B237EF7D37FD1096080AA28FF717EF
 	bool _returnValue;
 	_returnValue = UInt64_TryFormat_m0A81EA0B51B237EF7D37FD1096080AA28FF717EF(_thisAdjusted, ___0_destination, ___1_charsWritten, ___2_format, ___3_provider, method);
 	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t UInt64_Parse_m5D07DDFA6DA8E3F85D6E07EAE33756AF742CBAB0 (String_t* ___0_s, int32_t ___1_style, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Number_tA71F95D4B9F046BDA97EFA91BC6517925969650A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_Parse_m5D07DDFA6DA8E3F85D6E07EAE33756AF742CBAB0_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UInt64_Parse_m5D07DDFA6DA8E3F85D6E07EAE33756AF742CBAB0_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
+	{
+		int32_t L_0 = ___1_style;
+		NumberFormatInfo_ValidateParseStyleInteger_mF397DAF8AA78FEEC47D154A66FFB8EBBC90E8E8F(L_0, NULL);
+		String_t* L_1 = ___0_s;
+		if (L_1)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		ThrowHelper_ThrowArgumentNullException_m05B7DB75576C421D7CA84FA73F84D7E114974CEC(((int32_t)48), NULL);
+	}
+
+IL_0010:
+	{
+		String_t* L_2 = ___0_s;
+		ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 L_3;
+		L_3 = String_op_Implicit_m7D7FE0449303AF92D8B2A85A06ADC6933B2ECC3A_inline(L_2, NULL);
+		int32_t L_4 = ___1_style;
+		NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472* L_5;
+		L_5 = NumberFormatInfo_get_CurrentInfo_m121C9878F777AD81289C7B2BF589293E509FD9B4(NULL);
+		il2cpp_codegen_runtime_class_init_inline(Number_tA71F95D4B9F046BDA97EFA91BC6517925969650A_il2cpp_TypeInfo_var);
+		uint64_t L_6;
+		L_6 = Number_ParseUInt64_m9637513E99ED361DDB6BBC9FD985FEC93CA7540B(L_3, L_4, L_5, NULL);
+		return L_6;
+	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t UInt64_Parse_m2DAEE5CD43B2F1924677B3697E4C967229D1AB48 (String_t* ___0_s, RuntimeObject* ___1_provider, const RuntimeMethod* method) 
 {

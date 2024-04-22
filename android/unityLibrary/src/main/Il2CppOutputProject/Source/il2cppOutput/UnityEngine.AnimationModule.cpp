@@ -15,7 +15,6 @@ struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
 struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
 struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
-struct Animation_t6593B06C39E3B139808B19F2C719C860F3F61040;
 struct AnimationEvent_t77294DB2372A5C387B53EEA3EFDC550C75EC3174;
 struct AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE;
 struct Animator_t8A52E42AE54F76681838FE9E632683EF3952E883;
@@ -24,7 +23,6 @@ struct Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA;
 struct Delegate_t;
 struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
 struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
-struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
 struct InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E;
 struct InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB;
 struct MethodInfo_t;
@@ -34,10 +32,8 @@ struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
 struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A;
 struct StateMachineBehaviour_t59C5685227B06222F5AF7027E2DA530AB99AFDF7;
 struct String_t;
-struct TrackedReference_tF35FF4FB6E89ACD81C24469FAF0CA6FFF29262A2;
 struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
-struct Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530;
 struct OnOverrideControllerDirtyCallback_tDC67F7661A27502AD804BDE0B696955AFD4A44D5;
 
 IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_AnimationModule[];
@@ -49,7 +45,6 @@ IL2CPP_EXTERN_C RuntimeClass* AnimationPosePlayable_tBB5B82AC675A509F3808C8F825E
 IL2CPP_EXTERN_C RuntimeClass* AnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var;
@@ -94,8 +89,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* AnimationScriptPlayable_Equals_mAD02E40704C
 IL2CPP_EXTERN_C const RuntimeMethod* AnimationScriptPlayable_GetHandle_m30355B6EE1AA3BA36D628251FB4291386D223646_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AnimationScriptPlayable__cctor_m5ED4D3FC06BC7A51D3A48B5611F759CB00F7CF54_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AnimationScriptPlayable__ctor_m6DEFD72735E79009FC1484AA2A7A82E6CE601247_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AnimationState__ctor_mB18C82530ADA40EE3BC245AAB0673941D78B779E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Animation_GetEnumerator_m247062F212D9C579DAE25D9BC86E4921DC5719E6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AnimatorControllerPlayable_Equals_m14125BB4CCFCDFFD098223AF20E38501BA264180_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AnimatorControllerPlayable_GetHandle_m718D9A4E0DB7AC62947B1D09E47DBCD25C27AF6C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AnimatorControllerPlayable_SetHandle_mD86A3C0D03453FAF21903F7A52A743AB2DA6DED4_RuntimeMethod_var;
@@ -106,10 +99,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* Animator_GetBool_mBC4D952885FF7504963E5923C
 IL2CPP_EXTERN_C const RuntimeMethod* Animator_ResetTrigger_m8DCA67D5A6B56702E3FAD4E18243E194B71297CC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m82477C155D4F7CF98317C0EEC9F5070D196AA671_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Reset_m687381C45ECBBD052447FAC06ECE9760FF23DA63_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator__ctor_mF3FB66377864673B8DAF14A36DB6D069B98A92F4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m4A17FE0020D4C8856EFC8EF531B99723FFB2B9DF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NotKeyableAttribute__ctor_m818249C0E7E98C56F41B672A3140A87EA568EB84_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* PlayableHandle_IsPlayableOfType_TisAnimationLayerMixerPlayable_tAD8D28A1E2FB76567E9748CDD11699AEF0B4317D_m23764EE36FE7A81A245C7146FF1E9DF6530DA321_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* PlayableHandle_IsPlayableOfType_TisAnimationMixerPlayable_t2984697B87B8719A34519FCF2130545D6D7AB6C0_m644E76378CB4DDC0CE669FE1DCE8A8917595D0ED_RuntimeMethod_var;
@@ -143,15 +132,10 @@ IL2CPP_EXTERN_C const RuntimeType* AnimationOffsetPlayable_t39A1B1103995D63650F6
 IL2CPP_EXTERN_C const RuntimeType* AnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* AnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* AnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Animation_t6593B06C39E3B139808B19F2C719C860F3F61040_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* Animator_t8A52E42AE54F76681838FE9E632683EF3952E883_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* RuntimeObject_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* StateMachineBehaviour_t59C5685227B06222F5AF7027E2DA530AB99AFDF7_0_0_0_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
@@ -192,11 +176,6 @@ struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
 };
 struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
 {
-};
-struct Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530  : public RuntimeObject
-{
-	Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* ___m_Outer;
-	int32_t ___m_CurrentIndex;
 };
 struct AnimatorClipInfo_t0C913173594C893E36282602F54ABD06AC1CFA03 
 {
@@ -600,9 +579,6 @@ struct HumanBone_t9A978BB2457E935D0B6FA64ADDE60562ADAE5FD8_marshaled_com
 	Il2CppChar* ___m_HumanName;
 	HumanLimit_tE825F951DEE60E2641DD91F3C92C6B56A139A36E ___limit;
 };
-struct Motion_tBCD49FBF5608AD21FC03B63C8182FABCEF2707AC  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
-{
-};
 struct MulticastDelegate_t  : public Delegate_t
 {
 	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates;
@@ -630,9 +606,6 @@ struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com 
 struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
 {
 };
-struct AnimationClip_t00BD2F131D308A4AD2C6B0BF66644FC25FECE712  : public Motion_tBCD49FBF5608AD21FC03B63C8182FABCEF2707AC
-{
-};
 struct AnimatorOverrideController_tF78BD58B30BB0D767E7A96F8428EA66F2DFD5493  : public RuntimeAnimatorController_t6F7C753402B42EC23C163099CF935C5E0D7A7254
 {
 	OnOverrideControllerDirtyCallback_tDC67F7661A27502AD804BDE0B696955AFD4A44D5* ___OnOverrideControllerDirty;
@@ -650,9 +623,6 @@ struct StateMachineBehaviour_t59C5685227B06222F5AF7027E2DA530AB99AFDF7  : public
 {
 };
 struct OnOverrideControllerDirtyCallback_tDC67F7661A27502AD804BDE0B696955AFD4A44D5  : public MulticastDelegate_t
-{
-};
-struct Animation_t6593B06C39E3B139808B19F2C719C860F3F61040  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
 {
 };
 struct Animator_t8A52E42AE54F76681838FE9E632683EF3952E883  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
@@ -776,11 +746,7 @@ IL2CPP_EXTERN_C void Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshal_co
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayableHandle_IsPlayableOfType_TisIl2CppFullySharedGenericAny_mA4E158678160F1D9713643D243397452502EE932_gshared (PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4* __this, const RuntimeMethod* method) ;
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator__ctor_mF3FB66377864673B8DAF14A36DB6D069B98A92F4 (Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530* __this, Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* ___0_outer, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE* Animation_GetStateAtIndex_mA06564CBB11021A3ADA69EA0BCDCD820183E240F (Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* __this, int32_t ___0_index, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Animation_GetStateCount_mB779E6750180C77CE5F2E81B78C9AFEE93FCB1FE (Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TrackedReference__ctor_m0E498FD0AD5807B7B91CB0005170E522DAE3616A (TrackedReference_tF35FF4FB6E89ACD81C24469FAF0CA6FFF29262A2* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Animator_GetBoolString_m8698CB03DDD5DF7B991EC772BC424F2A649EB950 (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___0_name, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetBoolString_m08A0BC6717BF5FD3E43D3EFB2509E359C1196C00 (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___0_name, bool ___1_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetTriggerString_m177C75DFBE070DE66FC08A3232444CCEA409C25E (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___0_name, const RuntimeMethod* method) ;
@@ -1185,221 +1151,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachineBehaviour__ctor_m9663A75D101
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Animation_GetEnumerator_m247062F212D9C579DAE25D9BC86E4921DC5719E6 (Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Animation_GetEnumerator_m247062F212D9C579DAE25D9BC86E4921DC5719E6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Animation_t6593B06C39E3B139808B19F2C719C860F3F61040_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	RuntimeObject* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Animation_GetEnumerator_m247062F212D9C579DAE25D9BC86E4921DC5719E6_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 56));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 57));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 58));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 59));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 60));
-		Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530* L_0 = (Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530*)il2cpp_codegen_object_new(Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530_il2cpp_TypeInfo_var);
-		Enumerator__ctor_mF3FB66377864673B8DAF14A36DB6D069B98A92F4(L_0, __this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 60));
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 61));
-		RuntimeObject* L_1 = V_0;
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE* Animation_GetStateAtIndex_mA06564CBB11021A3ADA69EA0BCDCD820183E240F (Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* __this, int32_t ___0_index, const RuntimeMethod* method) 
-{
-	typedef AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE* (*Animation_GetStateAtIndex_mA06564CBB11021A3ADA69EA0BCDCD820183E240F_ftn) (Animation_t6593B06C39E3B139808B19F2C719C860F3F61040*, int32_t);
-	static Animation_GetStateAtIndex_mA06564CBB11021A3ADA69EA0BCDCD820183E240F_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Animation_GetStateAtIndex_mA06564CBB11021A3ADA69EA0BCDCD820183E240F_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animation::GetStateAtIndex(System.Int32)");
-	AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE* icallRetVal = _il2cpp_icall_func(__this, ___0_index);
-	return icallRetVal;
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Animation_GetStateCount_mB779E6750180C77CE5F2E81B78C9AFEE93FCB1FE (Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* __this, const RuntimeMethod* method) 
-{
-	typedef int32_t (*Animation_GetStateCount_mB779E6750180C77CE5F2E81B78C9AFEE93FCB1FE_ftn) (Animation_t6593B06C39E3B139808B19F2C719C860F3F61040*);
-	static Animation_GetStateCount_mB779E6750180C77CE5F2E81B78C9AFEE93FCB1FE_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Animation_GetStateCount_mB779E6750180C77CE5F2E81B78C9AFEE93FCB1FE_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Animation::GetStateCount()");
-	int32_t icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator__ctor_mF3FB66377864673B8DAF14A36DB6D069B98A92F4 (Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530* __this, Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* ___0_outer, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator__ctor_mF3FB66377864673B8DAF14A36DB6D069B98A92F4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_outer));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Enumerator__ctor_mF3FB66377864673B8DAF14A36DB6D069B98A92F4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 62));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 63));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 64));
-		__this->___m_CurrentIndex = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 65));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 66));
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 66));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 67));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 68));
-		Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* L_0 = ___0_outer;
-		__this->___m_Outer = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Outer), (void*)L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 69));
-		return;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m4A17FE0020D4C8856EFC8EF531B99723FFB2B9DF (Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m4A17FE0020D4C8856EFC8EF531B99723FFB2B9DF_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RuntimeObject_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	RuntimeObject* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Enumerator_get_Current_m4A17FE0020D4C8856EFC8EF531B99723FFB2B9DF_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 70));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 71));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 72));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 73));
-		Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* L_0 = __this->___m_Outer;
-		int32_t L_1 = __this->___m_CurrentIndex;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 74));
-		NullCheck(L_0);
-		AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE* L_2;
-		L_2 = Animation_GetStateAtIndex_mA06564CBB11021A3ADA69EA0BCDCD820183E240F(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 74));
-		V_0 = L_2;
-		goto IL_0015;
-	}
-
-IL_0015:
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 75));
-		RuntimeObject* L_3 = V_0;
-		return L_3;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m82477C155D4F7CF98317C0EEC9F5070D196AA671 (Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m82477C155D4F7CF98317C0EEC9F5070D196AA671_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Enumerator_MoveNext_m82477C155D4F7CF98317C0EEC9F5070D196AA671_RuntimeMethod_var, methodExecutionContextThis, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 76));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 77));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 78));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 79));
-		Animation_t6593B06C39E3B139808B19F2C719C860F3F61040* L_0 = __this->___m_Outer;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 80));
-		NullCheck(L_0);
-		int32_t L_1;
-		L_1 = Animation_GetStateCount_mB779E6750180C77CE5F2E81B78C9AFEE93FCB1FE(L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 80));
-		V_0 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 81));
-		int32_t L_2 = __this->___m_CurrentIndex;
-		__this->___m_CurrentIndex = ((int32_t)il2cpp_codegen_add(L_2, 1));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 82));
-		int32_t L_3 = __this->___m_CurrentIndex;
-		int32_t L_4 = V_0;
-		V_1 = (bool)((((int32_t)L_3) < ((int32_t)L_4))? 1 : 0);
-		goto IL_0027;
-	}
-
-IL_0027:
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 83));
-		bool L_5 = V_1;
-		return L_5;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Reset_m687381C45ECBBD052447FAC06ECE9760FF23DA63 (Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Reset_m687381C45ECBBD052447FAC06ECE9760FF23DA63_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_t81434F7D5603121F3D7BD6DB916FE1C755307530_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Enumerator_Reset_m687381C45ECBBD052447FAC06ECE9760FF23DA63_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 84));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 85));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 86));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 87));
-		__this->___m_CurrentIndex = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 88));
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationState__ctor_mB18C82530ADA40EE3BC245AAB0673941D78B779E (AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnimationState__ctor_mB18C82530ADA40EE3BC245AAB0673941D78B779E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationState__ctor_mB18C82530ADA40EE3BC245AAB0673941D78B779E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
-	{
-		TrackedReference__ctor_m0E498FD0AD5807B7B91CB0005170E522DAE3616A(__this, NULL);
-		return;
-	}
-}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -1450,48 +1201,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationEvent__ctor_mBC954085B1D18B436D
 	}
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationEvent__ctor_mBC954085B1D18B436D08E7ADE3458B91E208F3B2_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 89));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 90));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 56));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 57));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 91));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 92));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 58));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 59));
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 92));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 93));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 94));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 59));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 60));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 61));
 		__this->___m_Time = (0.0f);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 95));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 62));
 		__this->___m_FunctionName = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_FunctionName), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 96));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 63));
 		__this->___m_StringParameter = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_StringParameter), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 97));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 64));
 		__this->___m_ObjectReferenceParameter = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ObjectReferenceParameter), (void*)(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 98));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 65));
 		__this->___m_FloatParameter = (0.0f);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 99));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 66));
 		__this->___m_IntParameter = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 100));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 67));
 		__this->___m_MessageOptions = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 101));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 68));
 		__this->___m_Source = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 102));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 69));
 		__this->___m_StateSender = (AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_StateSender), (void*)(AnimationState_tC704F25A20169025B6CFDC2F00DC84152B5B73CE*)NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 103));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 70));
 		return;
 	}
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -1620,23 +1363,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Animator_GetBool_mBC4D952885FF7504963E59
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Animator_GetBool_mBC4D952885FF7504963E5923C29481A891028FD8_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 104));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 105));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 71));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 72));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 106));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 107));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 73));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 74));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 108));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 75));
 		bool L_1;
 		L_1 = Animator_GetBoolString_m8698CB03DDD5DF7B991EC772BC424F2A649EB950(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 108));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 75));
 		V_0 = L_1;
 		goto IL_000b;
 	}
 
 IL_000b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 109));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 76));
 		bool L_2 = V_0;
 		return L_2;
 	}
@@ -1653,17 +1396,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetBool_m6F8D4FAF0770CD4EC1F544
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name), (&___1_value));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 110));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 111));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 77));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 78));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 112));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 113));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 79));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 80));
 		String_t* L_0 = ___0_name;
 		bool L_1 = ___1_value;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 114));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 81));
 		Animator_SetBoolString_m08A0BC6717BF5FD3E43D3EFB2509E359C1196C00(__this, L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 114));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 115));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 81));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 82));
 		return;
 	}
 }
@@ -1679,16 +1422,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetTrigger_mC9CD54D627C8843EF6E
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 116));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 117));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 83));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 84));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 118));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 119));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 85));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 86));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 120));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 87));
 		Animator_SetTriggerString_m177C75DFBE070DE66FC08A3232444CCEA409C25E(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 120));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 121));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 87));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 88));
 		return;
 	}
 }
@@ -1704,16 +1447,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_ResetTrigger_m8DCA67D5A6B56702E
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_name));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Animator_ResetTrigger_m8DCA67D5A6B56702E3FAD4E18243E194B71297CC_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 122));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 123));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 89));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 90));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 124));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 125));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 91));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 92));
 		String_t* L_0 = ___0_name;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 126));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 93));
 		Animator_ResetTriggerString_m78259348CED35F156148A64B95EBD73CE3951868(__this, L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 126));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 127));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 93));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 94));
 		return;
 	}
 }
@@ -1779,16 +1522,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimatorOverrideController_OnInvalidateO
 	bool V_0 = false;
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_controller));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimatorOverrideController_OnInvalidateOverrideController_mA6B0AA977505FDEFDD6BCA2E941FD3A18AE1AD23_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 128));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 129));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 95));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 96));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 130));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 131));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 97));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 98));
 		AnimatorOverrideController_tF78BD58B30BB0D767E7A96F8428EA66F2DFD5493* L_0 = ___0_controller;
 		NullCheck(L_0);
 		OnOverrideControllerDirtyCallback_tDC67F7661A27502AD804BDE0B696955AFD4A44D5* L_1 = L_0->___OnOverrideControllerDirty;
 		V_0 = (bool)((!(((RuntimeObject*)(OnOverrideControllerDirtyCallback_tDC67F7661A27502AD804BDE0B696955AFD4A44D5*)L_1) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 132));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 99));
 		bool L_2 = V_0;
 		if (!L_2)
 		{
@@ -1796,19 +1539,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimatorOverrideController_OnInvalidateO
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 133));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 100));
 		AnimatorOverrideController_tF78BD58B30BB0D767E7A96F8428EA66F2DFD5493* L_3 = ___0_controller;
 		NullCheck(L_3);
 		OnOverrideControllerDirtyCallback_tDC67F7661A27502AD804BDE0B696955AFD4A44D5* L_4 = L_3->___OnOverrideControllerDirty;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 134));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 101));
 		NullCheck(L_4);
 		OnOverrideControllerDirtyCallback_Invoke_m538DCB0FFFE75495DC3977DBBF55A07C570F8B5A_inline(L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 134));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 101));
 	}
 
 IL_001a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 135));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 102));
 		return;
 	}
 }
@@ -2045,14 +1788,6 @@ IL2CPP_EXTERN_C void HumanBone_t9A978BB2457E935D0B6FA64ADDE60562ADAE5FD8_marshal
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotKeyableAttribute__ctor_m818249C0E7E98C56F41B672A3140A87EA568EB84 (NotKeyableAttribute_tDDB6B25B26F649E3CED893EE1E63B6DE66844483* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2090,11 +1825,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationClipPlayable_GetHandle_mE775F2247901BA293DB01A8D384D3F9D02A25627_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 136));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 137));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 103));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 104));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 138));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 139));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 105));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 106));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2102,7 +1837,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 140));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 107));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -2131,31 +1866,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationClipPlayable_Equals_mC5263BEA86
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationClipPlayable_Equals_mC5263BEA86C02CEDF93C5B14EAA168883E1DB5F4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 141));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 142));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 108));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 109));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 143));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 144));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 145));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 110));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 111));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 112));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimationClipPlayable_GetHandle_mE775F2247901BA293DB01A8D384D3F9D02A25627(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 145));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 146));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 112));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 113));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1;
 		L_1 = AnimationClipPlayable_GetHandle_mE775F2247901BA293DB01A8D384D3F9D02A25627((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 146));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 147));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 113));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 114));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_op_Equality_m0E6C48A28F75A870AC22ADE3BD42F7F70A43C99C(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 147));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 114));
 		V_0 = L_2;
 		goto IL_0016;
 	}
 
 IL_0016:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 148));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 115));
 		bool L_3 = V_0;
 		return L_3;
 	}
@@ -2203,18 +1938,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationLayerMixerPlayable__ctor_m28884
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle), (&___1_singleLayerOptimization));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationLayerMixerPlayable__ctor_m28884B8B9F7E057DF947E3B43ED78EA107368BD6_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 149));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 150));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 116));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 117));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 151));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 152));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 153));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 118));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 119));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 120));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098((&___0_handle), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 153));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 120));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 154));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 121));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -2222,15 +1957,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationLayerMixerPlayable__ctor_m28884
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 155));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 156));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 157));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 122));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 123));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 124));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_IsPlayableOfType_TisAnimationLayerMixerPlayable_tAD8D28A1E2FB76567E9748CDD11699AEF0B4317D_m23764EE36FE7A81A245C7146FF1E9DF6530DA321((&___0_handle), PlayableHandle_IsPlayableOfType_TisAnimationLayerMixerPlayable_tAD8D28A1E2FB76567E9748CDD11699AEF0B4317D_m23764EE36FE7A81A245C7146FF1E9DF6530DA321_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 157));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 124));
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 158));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 125));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -2238,31 +1973,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationLayerMixerPlayable__ctor_m28884
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 159));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 160));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 126));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 127));
 		InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E* L_4 = (InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var)));
 		InvalidCastException__ctor_mED3F9781E6CA47A92C602C896EDDF2F40ECB8644(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralD2435BFAEB0372E848D9BE812E3B06AB862CC3D1)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 160));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 127));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimationLayerMixerPlayable__ctor_m28884B8B9F7E057DF947E3B43ED78EA107368BD6_RuntimeMethod_var)));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 161));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 128));
 		bool L_5 = ___1_singleLayerOptimization;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 162));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 129));
 		il2cpp_codegen_runtime_class_init_inline(AnimationLayerMixerPlayable_tAD8D28A1E2FB76567E9748CDD11699AEF0B4317D_il2cpp_TypeInfo_var);
 		AnimationLayerMixerPlayable_SetSingleLayerOptimizationInternal_mF1EC1B461F2CCB8D7E01799875DDB5FC8FE4BBDB((&___0_handle), L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 162));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 163));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 129));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 130));
 	}
 
 IL_0030:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 164));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 131));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_6 = ___0_handle;
 		__this->___m_Handle = L_6;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 165));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 132));
 		return;
 	}
 }
@@ -2287,11 +2022,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationLayerMixerPlayable_GetHandle_m324A98D0B0BFC0441377D65CAE93C914F828721F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 166));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 167));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 133));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 134));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 168));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 169));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 135));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 136));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2299,7 +2034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 170));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 137));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -2329,32 +2064,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationLayerMixerPlayable_Equals_mA5D2
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationLayerMixerPlayable_Equals_mA5D24E61E2DE1140B409F3B569DBA3C185751970_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 171));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 172));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 138));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 139));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 173));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 174));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 175));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 140));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 141));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 142));
 		il2cpp_codegen_runtime_class_init_inline(AnimationLayerMixerPlayable_tAD8D28A1E2FB76567E9748CDD11699AEF0B4317D_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimationLayerMixerPlayable_GetHandle_m324A98D0B0BFC0441377D65CAE93C914F828721F(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 175));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 176));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 142));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 143));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1;
 		L_1 = AnimationLayerMixerPlayable_GetHandle_m324A98D0B0BFC0441377D65CAE93C914F828721F((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 176));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 177));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 143));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 144));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_op_Equality_m0E6C48A28F75A870AC22ADE3BD42F7F70A43C99C(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 177));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 144));
 		V_0 = L_2;
 		goto IL_0016;
 	}
 
 IL_0016:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 178));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 145));
 		bool L_3 = V_0;
 		return L_3;
 	}
@@ -2387,20 +2122,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationLayerMixerPlayable__cctor_m27A7
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationLayerMixerPlayable__cctor_m27A78F2EB8840FFCC84901AB4E916ACCE8D8E49B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 179));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 180));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 146));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 147));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 181));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 182));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 148));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 149));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 182));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 183));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 149));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 150));
 		AnimationLayerMixerPlayable_tAD8D28A1E2FB76567E9748CDD11699AEF0B4317D L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		AnimationLayerMixerPlayable__ctor_m28884B8B9F7E057DF947E3B43ED78EA107368BD6((&L_1), L_0, (bool)1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 183));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 150));
 		((AnimationLayerMixerPlayable_tAD8D28A1E2FB76567E9748CDD11699AEF0B4317D_StaticFields*)il2cpp_codegen_static_fields_for(AnimationLayerMixerPlayable_tAD8D28A1E2FB76567E9748CDD11699AEF0B4317D_il2cpp_TypeInfo_var))->___m_NullPlayable = L_1;
 		return;
 	}
@@ -2430,18 +2165,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationMixerPlayable__ctor_mBF84CC0645
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationMixerPlayable__ctor_mBF84CC064549C2C00B2AE1174018335958EB7EA7_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 184));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 185));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 151));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 152));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 186));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 187));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 188));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 153));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 154));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 155));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098((&___0_handle), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 188));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 155));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 189));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 156));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -2449,15 +2184,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationMixerPlayable__ctor_mBF84CC0645
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 190));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 191));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 192));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 157));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 158));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 159));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_IsPlayableOfType_TisAnimationMixerPlayable_t2984697B87B8719A34519FCF2130545D6D7AB6C0_m644E76378CB4DDC0CE669FE1DCE8A8917595D0ED((&___0_handle), PlayableHandle_IsPlayableOfType_TisAnimationMixerPlayable_t2984697B87B8719A34519FCF2130545D6D7AB6C0_m644E76378CB4DDC0CE669FE1DCE8A8917595D0ED_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 192));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 159));
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 193));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 160));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -2465,25 +2200,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationMixerPlayable__ctor_mBF84CC0645
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 194));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 195));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 161));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 162));
 		InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E* L_4 = (InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var)));
 		InvalidCastException__ctor_mED3F9781E6CA47A92C602C896EDDF2F40ECB8644(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4DEE968069F34C26613ADFCD69C41EFC29314286)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 195));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 162));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimationMixerPlayable__ctor_mBF84CC064549C2C00B2AE1174018335958EB7EA7_RuntimeMethod_var)));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 196));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 163));
 	}
 
 IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 197));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 164));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_5 = ___0_handle;
 		__this->___m_Handle = L_5;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 198));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 165));
 		return;
 	}
 }
@@ -2508,11 +2243,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationMixerPlayable_GetHandle_mBA6CEB1579A713A985D474E75BC282728318882F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 199));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 200));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 166));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 167));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 201));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 202));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 168));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 169));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2520,7 +2255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 203));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 170));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -2550,32 +2285,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationMixerPlayable_Equals_m6EBE21563
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationMixerPlayable_Equals_m6EBE215636EEEA3196A43F4D6C1FE6DD704AFA4E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 204));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 205));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 171));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 172));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 206));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 207));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 208));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 173));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 174));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 175));
 		il2cpp_codegen_runtime_class_init_inline(AnimationMixerPlayable_t2984697B87B8719A34519FCF2130545D6D7AB6C0_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimationMixerPlayable_GetHandle_mBA6CEB1579A713A985D474E75BC282728318882F(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 208));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 209));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 175));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 176));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1;
 		L_1 = AnimationMixerPlayable_GetHandle_mBA6CEB1579A713A985D474E75BC282728318882F((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 209));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 210));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 176));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 177));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_op_Equality_m0E6C48A28F75A870AC22ADE3BD42F7F70A43C99C(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 210));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 177));
 		V_0 = L_2;
 		goto IL_0016;
 	}
 
 IL_0016:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 211));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 178));
 		bool L_3 = V_0;
 		return L_3;
 	}
@@ -2600,20 +2335,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationMixerPlayable__cctor_m7D67E8E77
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationMixerPlayable__cctor_m7D67E8E778387293AF1ACB1FDBE6ADA3E456A969_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 212));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 213));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 179));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 180));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 214));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 215));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 181));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 182));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 215));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 216));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 182));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 183));
 		AnimationMixerPlayable_t2984697B87B8719A34519FCF2130545D6D7AB6C0 L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		AnimationMixerPlayable__ctor_mBF84CC064549C2C00B2AE1174018335958EB7EA7((&L_1), L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 216));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 183));
 		((AnimationMixerPlayable_t2984697B87B8719A34519FCF2130545D6D7AB6C0_StaticFields*)il2cpp_codegen_static_fields_for(AnimationMixerPlayable_t2984697B87B8719A34519FCF2130545D6D7AB6C0_il2cpp_TypeInfo_var))->___m_NullPlayable = L_1;
 		return;
 	}
@@ -2643,18 +2378,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationMotionXToDeltaPlayable__ctor_mD
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationMotionXToDeltaPlayable__ctor_mDE3C14B4B975AC693669D66B6E41BB6432AFA940_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 217));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 218));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 184));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 185));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 219));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 220));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 221));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 186));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 187));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 188));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098((&___0_handle), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 221));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 188));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 222));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 189));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -2662,15 +2397,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationMotionXToDeltaPlayable__ctor_mD
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 223));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 224));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 225));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 190));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 191));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 192));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_IsPlayableOfType_TisAnimationMotionXToDeltaPlayable_t3946605ADB0B4C054A27B3D65A59F8EB75B6BE18_mE6DAD58415B04EE79FD34641B365283758722ABF((&___0_handle), PlayableHandle_IsPlayableOfType_TisAnimationMotionXToDeltaPlayable_t3946605ADB0B4C054A27B3D65A59F8EB75B6BE18_mE6DAD58415B04EE79FD34641B365283758722ABF_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 225));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 192));
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 226));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 193));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -2678,25 +2413,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationMotionXToDeltaPlayable__ctor_mD
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 227));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 228));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 194));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 195));
 		InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E* L_4 = (InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var)));
 		InvalidCastException__ctor_mED3F9781E6CA47A92C602C896EDDF2F40ECB8644(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8DC2252638D84FAF2C30B95D54EC83F52FA6C630)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 228));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 195));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimationMotionXToDeltaPlayable__ctor_mDE3C14B4B975AC693669D66B6E41BB6432AFA940_RuntimeMethod_var)));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 229));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 196));
 	}
 
 IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 230));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 197));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_5 = ___0_handle;
 		__this->___m_Handle = L_5;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 231));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 198));
 		return;
 	}
 }
@@ -2721,11 +2456,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationMotionXToDeltaPlayable_GetHandle_m09F605E78AD7F0135C7F57EB048031091A50E3A2_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 232));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 233));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 199));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 200));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 234));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 235));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 201));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 202));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2733,7 +2468,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 236));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 203));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -2763,32 +2498,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationMotionXToDeltaPlayable_Equals_m
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationMotionXToDeltaPlayable_Equals_m7CBF3B7618EDBA4ECC2F3C2F54011248BC45CDCC_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 237));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 238));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 204));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 205));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 239));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 240));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 241));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 206));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 207));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 208));
 		il2cpp_codegen_runtime_class_init_inline(AnimationMotionXToDeltaPlayable_t3946605ADB0B4C054A27B3D65A59F8EB75B6BE18_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimationMotionXToDeltaPlayable_GetHandle_m09F605E78AD7F0135C7F57EB048031091A50E3A2(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 241));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 242));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 208));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 209));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1;
 		L_1 = AnimationMotionXToDeltaPlayable_GetHandle_m09F605E78AD7F0135C7F57EB048031091A50E3A2((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 242));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 243));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 209));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 210));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_op_Equality_m0E6C48A28F75A870AC22ADE3BD42F7F70A43C99C(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 243));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 210));
 		V_0 = L_2;
 		goto IL_0016;
 	}
 
 IL_0016:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 244));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 211));
 		bool L_3 = V_0;
 		return L_3;
 	}
@@ -2813,20 +2548,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationMotionXToDeltaPlayable__cctor_m
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationMotionXToDeltaPlayable__cctor_m4FC582F607F00D5E2A6B97219D2D4150AFA42AF1_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 245));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 246));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 212));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 213));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 247));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 248));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 214));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 215));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 248));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 249));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 215));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 216));
 		AnimationMotionXToDeltaPlayable_t3946605ADB0B4C054A27B3D65A59F8EB75B6BE18 L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		AnimationMotionXToDeltaPlayable__ctor_mDE3C14B4B975AC693669D66B6E41BB6432AFA940((&L_1), L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 249));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 216));
 		((AnimationMotionXToDeltaPlayable_t3946605ADB0B4C054A27B3D65A59F8EB75B6BE18_StaticFields*)il2cpp_codegen_static_fields_for(AnimationMotionXToDeltaPlayable_t3946605ADB0B4C054A27B3D65A59F8EB75B6BE18_il2cpp_TypeInfo_var))->___m_NullPlayable = L_1;
 		return;
 	}
@@ -2856,18 +2591,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationOffsetPlayable__ctor_mBF3AC6493
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationOffsetPlayable__ctor_mBF3AC6493556DAAEF608B359BEBE8FA6D9F8DBFD_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 250));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 251));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 217));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 218));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 252));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 253));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 254));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 219));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 220));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 221));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098((&___0_handle), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 254));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 221));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 255));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 222));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -2875,15 +2610,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationOffsetPlayable__ctor_mBF3AC6493
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 256));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 257));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 258));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 223));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 224));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 225));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_IsPlayableOfType_TisAnimationOffsetPlayable_t39A1B1103995D63650F606BA2EA4ABDF9484AFB4_mB35755A4D179F4DA51A96FCB3C4A8DF105C2BB12((&___0_handle), PlayableHandle_IsPlayableOfType_TisAnimationOffsetPlayable_t39A1B1103995D63650F606BA2EA4ABDF9484AFB4_mB35755A4D179F4DA51A96FCB3C4A8DF105C2BB12_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 258));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 225));
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 259));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 226));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -2891,25 +2626,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationOffsetPlayable__ctor_mBF3AC6493
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 260));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 261));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 227));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 228));
 		InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E* L_4 = (InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var)));
 		InvalidCastException__ctor_mED3F9781E6CA47A92C602C896EDDF2F40ECB8644(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralA3C8FF345EC45846B2EE6801F84DD49340F0A9E1)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 261));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 228));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimationOffsetPlayable__ctor_mBF3AC6493556DAAEF608B359BEBE8FA6D9F8DBFD_RuntimeMethod_var)));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 262));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 229));
 	}
 
 IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 263));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 230));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_5 = ___0_handle;
 		__this->___m_Handle = L_5;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 264));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 231));
 		return;
 	}
 }
@@ -2934,11 +2669,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationOffsetPlayable_GetHandle_m769BEFF90379AEAB0C579F7800953458CE3EBA78_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 265));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 266));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 232));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 233));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 267));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 268));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 234));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 235));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -2946,7 +2681,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 269));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 236));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -2976,30 +2711,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationOffsetPlayable_Equals_mEC28392A
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationOffsetPlayable_Equals_mEC28392ADD4E9639EB9228D106D93E21B3587270_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 270));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 271));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 237));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 238));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 272));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 273));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 274));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 239));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 240));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 241));
 		il2cpp_codegen_runtime_class_init_inline(AnimationOffsetPlayable_t39A1B1103995D63650F606BA2EA4ABDF9484AFB4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimationOffsetPlayable_GetHandle_m769BEFF90379AEAB0C579F7800953458CE3EBA78((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 274));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 241));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = L_0;
 		RuntimeObject* L_2 = Box(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var, &L_1);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 275));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 242));
 		Il2CppFakeBox<AnimationOffsetPlayable_t39A1B1103995D63650F606BA2EA4ABDF9484AFB4> L_3(AnimationOffsetPlayable_t39A1B1103995D63650F606BA2EA4ABDF9484AFB4_il2cpp_TypeInfo_var, __this);
 		bool L_4;
 		L_4 = ValueType_Equals_mCA5344597A8055EC544855AD60A983B10E0EE67D((ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F*)(&L_3), L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 275));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 242));
 		V_0 = L_4;
 		goto IL_001c;
 	}
 
 IL_001c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 276));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 243));
 		bool L_5 = V_0;
 		return L_5;
 	}
@@ -3024,20 +2759,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationOffsetPlayable__cctor_m6F50D35C
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationOffsetPlayable__cctor_m6F50D35CE1FAF52BD587DD3B440CBDE34A76B096_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 277));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 278));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 244));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 245));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 279));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 280));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 246));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 247));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 280));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 281));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 247));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 248));
 		AnimationOffsetPlayable_t39A1B1103995D63650F606BA2EA4ABDF9484AFB4 L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		AnimationOffsetPlayable__ctor_mBF3AC6493556DAAEF608B359BEBE8FA6D9F8DBFD((&L_1), L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 281));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 248));
 		((AnimationOffsetPlayable_t39A1B1103995D63650F606BA2EA4ABDF9484AFB4_StaticFields*)il2cpp_codegen_static_fields_for(AnimationOffsetPlayable_t39A1B1103995D63650F606BA2EA4ABDF9484AFB4_il2cpp_TypeInfo_var))->___m_NullPlayable = L_1;
 		return;
 	}
@@ -3075,18 +2810,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationPosePlayable__ctor_mC6C09678591
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationPosePlayable__ctor_mC6C096785918358CA7EC12BABCDF4BBD47F7BA3F_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 282));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 283));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 249));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 250));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 284));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 285));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 286));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 251));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 252));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 253));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098((&___0_handle), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 286));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 253));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 287));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 254));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -3094,15 +2829,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationPosePlayable__ctor_mC6C09678591
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 288));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 289));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 290));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 255));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 256));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 257));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_IsPlayableOfType_TisAnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C_m61A79154B28DAE22A64165C871757F3E447822A6((&___0_handle), PlayableHandle_IsPlayableOfType_TisAnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C_m61A79154B28DAE22A64165C871757F3E447822A6_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 290));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 257));
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 291));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 258));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -3110,25 +2845,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationPosePlayable__ctor_mC6C09678591
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 292));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 293));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 259));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 260));
 		InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E* L_4 = (InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var)));
 		InvalidCastException__ctor_mED3F9781E6CA47A92C602C896EDDF2F40ECB8644(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralE066D08B565F88D413FDACA14C42BFF008FF4EB9)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 293));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 260));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimationPosePlayable__ctor_mC6C096785918358CA7EC12BABCDF4BBD47F7BA3F_RuntimeMethod_var)));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 294));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 261));
 	}
 
 IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 295));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 262));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_5 = ___0_handle;
 		__this->___m_Handle = L_5;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 296));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 263));
 		return;
 	}
 }
@@ -3153,11 +2888,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationPosePlayable_GetHandle_m5DC7CA4CAF3CD525D454D99EBC3D12C3571B527B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 297));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 298));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 264));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 265));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 299));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 300));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 266));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 267));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3165,7 +2900,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 301));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 268));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -3195,30 +2930,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationPosePlayable_Equals_m10F1E7DD70
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationPosePlayable_Equals_m10F1E7DD7037B2AB3F7DAE3E01A1DC843EABD0A3_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 302));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 303));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 269));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 270));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 304));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 305));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 306));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 271));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 272));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 273));
 		il2cpp_codegen_runtime_class_init_inline(AnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimationPosePlayable_GetHandle_m5DC7CA4CAF3CD525D454D99EBC3D12C3571B527B((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 306));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 273));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = L_0;
 		RuntimeObject* L_2 = Box(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var, &L_1);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 307));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 274));
 		Il2CppFakeBox<AnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C> L_3(AnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C_il2cpp_TypeInfo_var, __this);
 		bool L_4;
 		L_4 = ValueType_Equals_mCA5344597A8055EC544855AD60A983B10E0EE67D((ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F*)(&L_3), L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 307));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 274));
 		V_0 = L_4;
 		goto IL_001c;
 	}
 
 IL_001c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 308));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 275));
 		bool L_5 = V_0;
 		return L_5;
 	}
@@ -3243,20 +2978,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationPosePlayable__cctor_mFA5FE84F06
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationPosePlayable__cctor_mFA5FE84F06C8E9A89C07190055BC898525F897C4_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 309));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 310));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 276));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 277));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 311));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 312));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 278));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 279));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 312));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 313));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 279));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 280));
 		AnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		AnimationPosePlayable__ctor_mC6C096785918358CA7EC12BABCDF4BBD47F7BA3F((&L_1), L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 313));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 280));
 		((AnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C_StaticFields*)il2cpp_codegen_static_fields_for(AnimationPosePlayable_tBB5B82AC675A509F3808C8F825EA24943714CD5C_il2cpp_TypeInfo_var))->___m_NullPlayable = L_1;
 		return;
 	}
@@ -3286,18 +3021,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationRemoveScalePlayable__ctor_m4D6C
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationRemoveScalePlayable__ctor_m4D6C7C4AB8E078050B0CC34C6732051CF043CFA2_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 314));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 315));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 281));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 282));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 316));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 317));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 318));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 283));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 284));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 285));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098((&___0_handle), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 318));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 285));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 319));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 286));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -3305,15 +3040,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationRemoveScalePlayable__ctor_m4D6C
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 320));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 321));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 322));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 287));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 288));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 289));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_IsPlayableOfType_TisAnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD_m961964786905D9B20B750AC27CB64EA48C4C5971((&___0_handle), PlayableHandle_IsPlayableOfType_TisAnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD_m961964786905D9B20B750AC27CB64EA48C4C5971_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 322));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 289));
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 323));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 290));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -3321,25 +3056,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationRemoveScalePlayable__ctor_m4D6C
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 324));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 325));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 291));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 292));
 		InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E* L_4 = (InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var)));
 		InvalidCastException__ctor_mED3F9781E6CA47A92C602C896EDDF2F40ECB8644(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral98C704D69BD1A288ED31DEE4ED4E50097A2D7018)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 325));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 292));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimationRemoveScalePlayable__ctor_m4D6C7C4AB8E078050B0CC34C6732051CF043CFA2_RuntimeMethod_var)));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 326));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 293));
 	}
 
 IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 327));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 294));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_5 = ___0_handle;
 		__this->___m_Handle = L_5;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 328));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 295));
 		return;
 	}
 }
@@ -3364,11 +3099,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationRemoveScalePlayable_GetHandle_mFFA58B879F31327187A20ED30E1C814B7BEAA9C6_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 329));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 330));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 296));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 297));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 331));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 332));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 298));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 299));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3376,7 +3111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 333));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 300));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -3406,30 +3141,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationRemoveScalePlayable_Equals_m0AC
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationRemoveScalePlayable_Equals_m0ACDD59B80103591DA8E84CB387FB10778D8C327_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 334));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 335));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 301));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 302));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 336));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 337));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 338));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 303));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 304));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 305));
 		il2cpp_codegen_runtime_class_init_inline(AnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimationRemoveScalePlayable_GetHandle_mFFA58B879F31327187A20ED30E1C814B7BEAA9C6((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 338));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 305));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = L_0;
 		RuntimeObject* L_2 = Box(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var, &L_1);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 339));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 306));
 		Il2CppFakeBox<AnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD> L_3(AnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD_il2cpp_TypeInfo_var, __this);
 		bool L_4;
 		L_4 = ValueType_Equals_mCA5344597A8055EC544855AD60A983B10E0EE67D((ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F*)(&L_3), L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 339));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 306));
 		V_0 = L_4;
 		goto IL_001c;
 	}
 
 IL_001c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 340));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 307));
 		bool L_5 = V_0;
 		return L_5;
 	}
@@ -3454,20 +3189,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationRemoveScalePlayable__cctor_m42E
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationRemoveScalePlayable__cctor_m42E614B0B33898D92DFE06CA6045698BE94DE633_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 341));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 342));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 308));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 309));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 343));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 344));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 310));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 311));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 344));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 345));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 311));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 312));
 		AnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		AnimationRemoveScalePlayable__ctor_m4D6C7C4AB8E078050B0CC34C6732051CF043CFA2((&L_1), L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 345));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 312));
 		((AnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD_StaticFields*)il2cpp_codegen_static_fields_for(AnimationRemoveScalePlayable_t915611F6D3CC150DDCAF56412AC3E5ACB518A9DD_il2cpp_TypeInfo_var))->___m_NullPlayable = L_1;
 		return;
 	}
@@ -3497,18 +3232,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationScriptPlayable__ctor_m6DEFD7273
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationScriptPlayable__ctor_m6DEFD72735E79009FC1484AA2A7A82E6CE601247_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 346));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 347));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 313));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 314));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 348));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 349));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 350));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 315));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 316));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 317));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098((&___0_handle), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 350));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 317));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 351));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 318));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -3516,15 +3251,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationScriptPlayable__ctor_m6DEFD7273
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 352));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 353));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 354));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 319));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 320));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 321));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_IsPlayableOfType_TisAnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127_m4F637AD893630043482383791FA7A0285EB16F6E((&___0_handle), PlayableHandle_IsPlayableOfType_TisAnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127_m4F637AD893630043482383791FA7A0285EB16F6E_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 354));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 321));
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 355));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 322));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -3532,25 +3267,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationScriptPlayable__ctor_m6DEFD7273
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 356));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 357));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 323));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 324));
 		InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E* L_4 = (InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var)));
 		InvalidCastException__ctor_mED3F9781E6CA47A92C602C896EDDF2F40ECB8644(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral860B9EA7CDAB02A8A4B38336805EAE2FBA31F09C)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 357));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 324));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimationScriptPlayable__ctor_m6DEFD72735E79009FC1484AA2A7A82E6CE601247_RuntimeMethod_var)));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 358));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 325));
 	}
 
 IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 359));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 326));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_5 = ___0_handle;
 		__this->___m_Handle = L_5;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 360));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 327));
 		return;
 	}
 }
@@ -3575,11 +3310,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationScriptPlayable_GetHandle_m30355B6EE1AA3BA36D628251FB4291386D223646_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 361));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 362));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 328));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 329));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 363));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 364));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 330));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 331));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3587,7 +3322,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 365));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 332));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -3617,32 +3352,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimationScriptPlayable_Equals_mAD02E407
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationScriptPlayable_Equals_mAD02E40704CBE4AB188DE0569052F8EA9864F4E4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 366));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 367));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 333));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 334));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 368));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 369));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 370));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 335));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 336));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 337));
 		il2cpp_codegen_runtime_class_init_inline(AnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimationScriptPlayable_GetHandle_m30355B6EE1AA3BA36D628251FB4291386D223646(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 370));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 371));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 337));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 338));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1;
 		L_1 = AnimationScriptPlayable_GetHandle_m30355B6EE1AA3BA36D628251FB4291386D223646((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 371));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 372));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 338));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 339));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_op_Equality_m0E6C48A28F75A870AC22ADE3BD42F7F70A43C99C(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 372));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 339));
 		V_0 = L_2;
 		goto IL_0016;
 	}
 
 IL_0016:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 373));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 340));
 		bool L_3 = V_0;
 		return L_3;
 	}
@@ -3667,20 +3402,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationScriptPlayable__cctor_m5ED4D3FC
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimationScriptPlayable__cctor_m5ED4D3FC06BC7A51D3A48B5611F759CB00F7CF54_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 374));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 375));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 341));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 342));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 376));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 377));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 343));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 344));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 377));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 378));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 344));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 345));
 		AnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127 L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		AnimationScriptPlayable__ctor_m6DEFD72735E79009FC1484AA2A7A82E6CE601247((&L_1), L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 378));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 345));
 		((AnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127_StaticFields*)il2cpp_codegen_static_fields_for(AnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127_il2cpp_TypeInfo_var))->___m_NullPlayable = L_1;
 		return;
 	}
@@ -3715,24 +3450,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimatorControllerPlayable__ctor_mBCB947
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimatorControllerPlayable__ctor_mBCB9475E2740BE1AEB94C08BAD14D51333258BFE_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 379));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 380));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 346));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 347));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 381));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 382));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 383));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 348));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 349));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 350));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 383));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 350));
 		__this->___m_Handle = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 384));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 351));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = ___0_handle;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 385));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 352));
 		il2cpp_codegen_runtime_class_init_inline(AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_il2cpp_TypeInfo_var);
 		AnimatorControllerPlayable_SetHandle_mD86A3C0D03453FAF21903F7A52A743AB2DA6DED4(__this, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 385));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 386));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 352));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 353));
 		return;
 	}
 }
@@ -3757,11 +3492,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimatorControllerPlayable_GetHandle_m718D9A4E0DB7AC62947B1D09E47DBCD25C27AF6C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 387));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 388));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 354));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 355));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 389));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 390));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 356));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 357));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0 = __this->___m_Handle;
 		V_0 = L_0;
 		goto IL_000a;
@@ -3769,7 +3504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayableHandle_t5D6A01EF94382EFEDC047202F71DF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 391));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 358));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1 = V_0;
 		return L_1;
 	}
@@ -3801,19 +3536,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimatorControllerPlayable_SetHandle_mD8
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_handle));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimatorControllerPlayable_SetHandle_mD86A3C0D03453FAF21903F7A52A743AB2DA6DED4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 392));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 393));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 359));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 360));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 394));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 395));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 361));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 362));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4* L_0 = (PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4*)(&__this->___m_Handle);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 396));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 363));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098(L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 396));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 363));
 		V_0 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 397));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 364));
 		bool L_2 = V_0;
 		if (!L_2)
 		{
@@ -3821,24 +3556,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimatorControllerPlayable_SetHandle_mD8
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 398));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 399));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 365));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 366));
 		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_3 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
 		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralBF563F6FCC25CE41FFE0BF7590AF9F4475916665)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 399));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 366));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimatorControllerPlayable_SetHandle_mD86A3C0D03453FAF21903F7A52A743AB2DA6DED4_RuntimeMethod_var)));
 	}
 
 IL_001b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 400));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 401));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 367));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 368));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = PlayableHandle_IsValid_m07631D12846BAAF2CC302E69A28A44BFE9EB5098((&___0_handle), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 401));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 368));
 		V_1 = L_4;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 402));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 369));
 		bool L_5 = V_1;
 		if (!L_5)
 		{
@@ -3846,15 +3581,15 @@ IL_001b:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 403));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 404));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 405));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 370));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 371));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 372));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_6;
 		L_6 = PlayableHandle_IsPlayableOfType_TisAnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_m83ED61FDEBC627830082467B83BF64724C68CD70((&___0_handle), PlayableHandle_IsPlayableOfType_TisAnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_m83ED61FDEBC627830082467B83BF64724C68CD70_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 405));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 372));
 		V_2 = (bool)((((int32_t)L_6) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 406));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 373));
 		bool L_7 = V_2;
 		if (!L_7)
 		{
@@ -3862,25 +3597,25 @@ IL_001b:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 407));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 408));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 374));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 375));
 		InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E* L_8 = (InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidCastException_t47FC62F21A3937E814D20381DDACEF240E95AC2E_il2cpp_TypeInfo_var)));
 		InvalidCastException__ctor_mED3F9781E6CA47A92C602C896EDDF2F40ECB8644(L_8, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralF5510C45DDAD777CCB4893578D995C9739F990F2)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 408));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 375));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AnimatorControllerPlayable_SetHandle_mD86A3C0D03453FAF21903F7A52A743AB2DA6DED4_RuntimeMethod_var)));
 	}
 
 IL_0040:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 409));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 376));
 	}
 
 IL_0041:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 410));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 377));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_9 = ___0_handle;
 		__this->___m_Handle = L_9;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 411));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 378));
 		return;
 	}
 }
@@ -3907,32 +3642,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnimatorControllerPlayable_Equals_m14125
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___0_other));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimatorControllerPlayable_Equals_m14125BB4CCFCDFFD098223AF20E38501BA264180_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 412));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 413));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 379));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 380));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 414));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 415));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 416));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 381));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 382));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 383));
 		il2cpp_codegen_runtime_class_init_inline(AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = AnimatorControllerPlayable_GetHandle_m718D9A4E0DB7AC62947B1D09E47DBCD25C27AF6C(__this, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 416));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 417));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 383));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 384));
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_1;
 		L_1 = AnimatorControllerPlayable_GetHandle_m718D9A4E0DB7AC62947B1D09E47DBCD25C27AF6C((&___0_other), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 417));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 418));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 384));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 385));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = PlayableHandle_op_Equality_m0E6C48A28F75A870AC22ADE3BD42F7F70A43C99C(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 418));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 385));
 		V_0 = L_2;
 		goto IL_0016;
 	}
 
 IL_0016:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 419));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 386));
 		bool L_3 = V_0;
 		return L_3;
 	}
@@ -3957,20 +3692,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimatorControllerPlayable__cctor_m88506
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AnimatorControllerPlayable__cctor_m88506D1B15D609B818DFDC6B2BCFF42ABB41B090_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 420));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 421));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 387));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 388));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 422));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 423));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 389));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 390));
 		il2cpp_codegen_runtime_class_init_inline(PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4_il2cpp_TypeInfo_var);
 		PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 L_0;
 		L_0 = PlayableHandle_get_Null_mF44FE0A71C67054D272F454C91F7E08CBF14A975(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 423));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 424));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 390));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 391));
 		AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		AnimatorControllerPlayable__ctor_mBCB9475E2740BE1AEB94C08BAD14D51333258BFE((&L_1), L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 424));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_AnimationModule + 391));
 		((AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_StaticFields*)il2cpp_codegen_static_fields_for(AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_il2cpp_TypeInfo_var))->___m_NullPlayable = L_1;
 		return;
 	}

@@ -64,7 +64,9 @@
     <Compile Include="Assets\MobileARTemplateAssets\UI\Scripts\CutoutMaskUI.cs" />
     <Compile Include="Assets\MobileARTemplateAssets\Scripts\ARTemplateMenuManager.cs" />
     <Compile Include="Assets\MobileARTemplateAssets\Scripts\ARFeatheredPlaneMeshVisualizerCompanion.cs" />
+    <Compile Include="Assets\Scripts\FlutterCommunication.cs" />
     <Compile Include="Assets\FlutterUnityIntegration\Demo\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\PlaceTrackedImages.cs" />
     <Compile Include="Assets\FlutterUnityIntegration\Demo\Rotate.cs" />
     <Compile Include="Assets\FlutterUnityIntegration\NativeAPI.cs" />
     <Compile Include="Assets\MobileARTemplateAssets\Scripts\GoalManager.cs" />
@@ -429,12 +431,12 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\AOT\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
