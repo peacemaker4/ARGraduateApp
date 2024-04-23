@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ar_app/pages/home.dart';
 import 'package:flutter_ar_app/pages/login.dart';
 import 'package:flutter_ar_app/pages/nav.dart';
+import 'package:flutter_ar_app/pages/welcome.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'auth.dart';
@@ -24,7 +25,7 @@ class _WidgetTreeState extends State<WidgetTree> {
           return NavPage();
         }
         else{
-          return LoginPage();
+          return WelcomePage();
         }
       },
     );

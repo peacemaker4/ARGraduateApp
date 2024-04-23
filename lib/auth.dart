@@ -1,9 +1,17 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_ar_app/firebasedb.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class Auth{
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
+  final _firebaseRTDB = FirebaseDB().firebaseRTDB;
+  
   User? get currentUser => _firebaseAuth.currentUser;
 
   Stream<User?> get authStateChanges => _firebaseAuth.authStateChanges();
@@ -18,11 +26,28 @@ class Auth{
   Future<void> createUserWithEmailAndPassword({
     required String email,
     required String password,
+    required String username,
   }) async {
-    await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
+
+    // DatabaseReference ref = FirebaseDatabase.instance.ref();
+
+    var cred = await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password).then((value) async {
+      var cred_email = value.user!.email!;
+      var cred_uid = value.user!.uid;
+
+      // var new_user = DBUser(cred_uid, cred_email, username);
+
+      DatabaseReference ref = _firebaseRTDB.ref("users/${cred_uid}");
+      await ref.set({
+        "uid": cred_uid,
+        "email": cred_email,
+        "username": username,
+        "role": "user"
+      });
+    });
   }
 
-  Future<UserCredential> signInWithGoogle() async {
+  Future<void> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
     final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
@@ -32,7 +57,19 @@ class Auth{
       idToken: googleAuth?.idToken,
     );
 
-    return await FirebaseAuth.instance.signInWithCredential(credential);
+    final sign = await FirebaseAuth.instance.signInWithCredential(credential).then((value) async{
+      var cred_email = value.user!.email!;
+      var cred_uid = value.user!.uid;
+      var username = value.user!.displayName;
+      
+      DatabaseReference ref = _firebaseRTDB.ref("users/${cred_uid}");
+      await ref.set({
+        "uid": cred_uid,
+        "email": cred_email,
+        "username": username,
+        "role": "user"
+      });
+    });
   }
 
   Future<void> signOut() async {

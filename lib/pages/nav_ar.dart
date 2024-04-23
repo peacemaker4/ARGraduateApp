@@ -9,29 +9,28 @@ import 'home.dart';
 import 'ar.dart';
 
 
-class NavPage extends StatefulWidget {
-  NavPage({Key? key}) : super(key: key);
+class NavArPage extends StatefulWidget {
+  NavArPage({Key? key}) : super(key: key);
 
   @override
-  State<NavPage> createState() => _NavPageState();
+  State<NavArPage> createState() => _NavArPageState();
 }
 
-class _NavPageState extends State<NavPage> {
+class _NavArPageState extends State<NavArPage> {
 
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
 
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    UnityInitPage(),
+    ARPage(),
     ProfilePage(),
     SettingsPage(),
   ];
   
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
