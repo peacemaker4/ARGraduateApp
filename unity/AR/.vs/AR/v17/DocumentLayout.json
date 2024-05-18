@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Bek\\Coding\\Flutter\\flutter_ar_app\\unity\\AR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA328BBD-B798-4854-C54F-D8119A2987F2}|Assembly-CSharp.csproj|c:\\bek\\coding\\flutter\\flutter_ar_app\\unity\\ar\\assets\\scripts\\fluttercommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA328BBD-B798-4854-C54F-D8119A2987F2}|Assembly-CSharp.csproj|c:\\bek\\coding\\flutter\\flutter_ar_app\\unity\\ar\\assets\\scripts\\placetrackedimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA328BBD-B798-4854-C54F-D8119A2987F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\placetrackedimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA328BBD-B798-4854-C54F-D8119A2987F2}|Assembly-CSharp.csproj|C:\\Bek\\Coding\\Flutter\\flutter_ar_app\\unity\\AR\\assets\\scripts\\fluttercommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA328BBD-B798-4854-C54F-D8119A2987F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fluttercommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlaceTrackedImages.cs",
+              "DocumentMoniker": "C:\\Bek\\Coding\\Flutter\\flutter_ar_app\\unity\\AR\\Assets\\Scripts\\PlaceTrackedImages.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlaceTrackedImages.cs",
+              "ToolTip": "C:\\Bek\\Coding\\Flutter\\flutter_ar_app\\unity\\AR\\Assets\\Scripts\\PlaceTrackedImages.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlaceTrackedImages.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwDYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T07:43:02.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FlutterCommunication.cs",
               "DocumentMoniker": "C:\\Bek\\Coding\\Flutter\\flutter_ar_app\\unity\\AR\\Assets\\Scripts\\FlutterCommunication.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlutterCommunication.cs",
@@ -26,8 +43,7 @@
               "RelativeToolTip": "Assets\\Scripts\\FlutterCommunication.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T05:13:07.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T05:13:07.563Z"
             }
           ]
         }

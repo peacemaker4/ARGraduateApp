@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ar_app/firebasedb.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -28,21 +29,17 @@ class Auth{
     required String password,
     required String username,
   }) async {
-
-    // DatabaseReference ref = FirebaseDatabase.instance.ref();
-
     var cred = await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password).then((value) async {
       var cred_email = value.user!.email!;
       var cred_uid = value.user!.uid;
-
-      // var new_user = DBUser(cred_uid, cred_email, username);
 
       DatabaseReference ref = _firebaseRTDB.ref("users/${cred_uid}");
       await ref.set({
         "uid": cred_uid,
         "email": cred_email,
         "username": username,
-        "role": "user"
+        "role": "user",
+        "img_url": "",
       });
     });
   }
@@ -58,17 +55,23 @@ class Auth{
     );
 
     final sign = await FirebaseAuth.instance.signInWithCredential(credential).then((value) async{
-      var cred_email = value.user!.email!;
+      SmartDialog.dismiss();
       var cred_uid = value.user!.uid;
-      var username = value.user!.displayName;
-      
-      DatabaseReference ref = _firebaseRTDB.ref("users/${cred_uid}");
-      await ref.set({
-        "uid": cred_uid,
-        "email": cred_email,
-        "username": username,
-        "role": "user"
-      });
+
+      final ref = FirebaseDatabase.instance.ref();
+      final snapshot = await ref.child('users/$cred_uid').get();
+      if (!snapshot.exists) {
+        var cred_email = value.user!.email!;
+        var username = value.user!.displayName;
+        
+        DatabaseReference ref = _firebaseRTDB.ref("users/${cred_uid}");
+        await ref.set({
+          "uid": cred_uid,
+          "email": cred_email,
+          "username": username,
+          "role": "user"
+        });
+      }
     });
   }
 
