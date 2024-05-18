@@ -1,6 +1,10 @@
 import 'package:bouncing_button/bouncing_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ar_app/values/app_colors.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,6 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   TextEditingController searchTextController = TextEditingController();
+
 
   Widget _bouncingButton(){
     return BouncingButton(
@@ -34,7 +39,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         )),
-        onPressed: (){
+        onPressed: () {
           
         }
     );
@@ -67,8 +72,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+
   @override
   Widget build(BuildContext context) {
+    requestPermission();
+    
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 244, 242, 244),
       body: Padding(
@@ -77,11 +85,16 @@ class _HomePageState extends State<HomePage> {
           children: [
             _search(),
             _header(),
-            _bouncingButton()
+            _bouncingButton(),
+            
           ]
         )
       )
     );
+  }
+
+  Future<void> requestPermission() async {
+    await Permission.storage.request();
   }
 
 }

@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ar_app/auth.dart';
 import 'package:flutter_ar_app/pages/login.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -11,6 +12,7 @@ class WelcomePage extends StatelessWidget {
 
   Future<void> signInWithGoogle() async {
     try {
+      SmartDialog.showLoading();
       await Auth().signInWithGoogle();
     } on FirebaseAuthException catch(e){
     }
@@ -47,6 +49,7 @@ class WelcomePage extends StatelessWidget {
         style: const TextStyle(
           fontSize: 40,
           fontWeight: FontWeight.bold,
+          fontFamily: "Montserrat",
         ),
       );
     }
@@ -61,7 +64,7 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              _screenImage('static/images/welcome.jpg'),
+              _screenImage('assets/images/welcome.jpg'),
               Padding(
                   padding:
                     const EdgeInsets.only(right: 15, left: 15, bottom: 65),
@@ -75,7 +78,8 @@ class WelcomePage extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 20,
+                          fontSize: 18,
+                          fontFamily: "Montserrat",
                         ),
                       ),
                       const SizedBox(
@@ -106,7 +110,7 @@ class WelcomePage extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => LoginPage()),
+                              MaterialPageRoute(builder: (context) => LoginPage(isLogin: false,)),
                             );
                           },
                         ),
@@ -115,10 +119,11 @@ class WelcomePage extends StatelessWidget {
                         height: 25,
                       ),
                       const Text(
-                        'Sign up using',
+                        'Sign in using',
                         style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 16,
+                          fontSize: 15,
+                          fontFamily: "Montserrat",
                         ),
                       ),
                       Padding(
@@ -174,7 +179,7 @@ class CustomButton extends StatelessWidget {
           padding: const EdgeInsets.all(13),
           decoration: BoxDecoration(
             color: isOutlined ? Colors.white : color,
-            border: Border.all(color: color, width: 2.5),
+            border: Border.all(color: color, width: 1.5),
             borderRadius: BorderRadius.circular(30),
           ),
           child: Center(
@@ -182,7 +187,8 @@ class CustomButton extends StatelessWidget {
               buttonText,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 20,
+                fontSize: 16,
+                fontFamily: "Montserrat",
                 color: isOutlined ? color : Colors.white,
               ),
             ),

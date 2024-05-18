@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ar_app/pages/profile.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_ar_app/pages/profile_base.dart';
 import 'package:flutter_ar_app/pages/settings.dart';
-import 'package:flutter_ar_app/pages/unityinit.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -22,10 +22,10 @@ class _NavPageState extends State<NavPage> {
 
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    UnityInitPage(),
-    ProfilePage(),
+    ARPage(),
+    ProfileBasePage(),
     SettingsPage(),
   ];
   
@@ -38,9 +38,13 @@ class _NavPageState extends State<NavPage> {
         backgroundColor: Colors.white,
         foregroundColor: Color.fromARGB(255, 57, 123, 255),
         shadowColor: Color.fromARGB(84, 0, 0, 0),
-        title: const Text('ARGraduateApp', style: TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w500)), //, style: TextStyle(fontFamily: "Poppins", weight: 100)
+        title: const Text('ARGraduateApp', style: TextStyle(fontFamily: "Montserrat", fontWeight: FontWeight.w500)), //, style: TextStyle(fontFamily: "Poppins", weight: 100)
         leading: Icon(Icons.center_focus_strong_outlined),
         centerTitle: true,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.white, 
+          statusBarBrightness: Brightness.light, // For iOS (dark icons)
+        ),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
