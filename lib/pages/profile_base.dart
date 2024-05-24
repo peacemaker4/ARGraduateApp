@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ar_app/pages/models_list.dart';
 import 'package:flutter_ar_app/pages/profile_edit.dart';
 import 'package:flutter_ar_app/pages/videos.dart';
 import 'package:flutter_ar_app/values/app_colors.dart';
@@ -32,7 +33,7 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
       child: Scaffold(
       // backgroundColor: Color.fromARGB(255, 244, 242, 244),
       body: DefaultTabController(
-        length: 2,
+        length: 3,
         child: NestedScrollView(
           headerSliverBuilder: (context, _) {
             return [
@@ -68,6 +69,12 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                         color: AppColors.primaryColor,
                       ),
                     ),
+                    Tab(
+                      icon: Icon(
+                        Icons.file_present_sharp,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -76,6 +83,7 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                   children: [
                     Gallery(),
                     Videos(),
+                    ModelsList(),
                   ],
                 ),
               ),
@@ -228,7 +236,7 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                     height: 20,
                   ),
                   Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
               _editProfileButton(data),
@@ -375,7 +383,8 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
 
   Widget _adminPanelButton(String user_role){
       if(user_role == "admin"){
-        return ElevatedButton(
+        return Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+          child: ElevatedButton(
           onPressed: () {
             Navigator.push(
               context,
@@ -412,6 +421,7 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
             ),
 
           ),
+        )
         );
       }
       return SizedBox.shrink();

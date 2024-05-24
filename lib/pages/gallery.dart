@@ -1,7 +1,10 @@
 import 'dart:io';
 
 import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_file_dialog/flutter_file_dialog.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shimmer/shimmer.dart';
@@ -10,6 +13,7 @@ import '../auth.dart';
 import '../firebasedb.dart';
 import 'package:path/path.dart' as path;
 import 'package:http/http.dart' as http;
+import 'dart:io' as io;
 
 class Gallery extends StatefulWidget {
   @override
@@ -30,12 +34,12 @@ class _GalleryState extends State<Gallery> {
           if(snapshot.data!.snapshot.children.isEmpty){
             return Scaffold(
               body: Center(
-                child: Text("No images available")
+                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("No images available", style: TextStyle(color: Colors.grey),), SizedBox(width: 3,) , Icon(Icons.image_not_supported, color: Colors.grey,)],) 
               ),
             );
           }
 
-          var content = snapshot.data?.snapshot.children.toList();
+          var content = snapshot.data?.snapshot.children.toList().reversed;
 
           if(content != null){
             return Scaffold(
@@ -61,45 +65,114 @@ class _GalleryState extends State<Gallery> {
 
   Widget _createGridTileWidget(DataSnapshot data) {
     var img_url = data.child("img_url").value.toString();
+    var img_name = data.child("img_name").value.toString();
 
-    _saveLocally(img_url);
+    // _saveLocally(img_url, img_name);
     
-    return Builder(
-      builder: (context) => GestureDetector(
-        onLongPress: () {
-          // _popupDialog = _createPopupDialog(data);
-          // Overlay.of(context).insert(_popupDialog);
-        },
-        onLongPressEnd: (details) => _popupDialog?.remove(),
-        child: Image.network(img_url, fit: BoxFit.cover),
-      ),
+    var image_file = getFileFromImageUrl(img_url);
+
+    return FutureBuilder(
+      future: image_file,
+      builder:(context, snapshot) {
+        if(snapshot.hasData){
+          return Builder(
+            builder: (context) => GestureDetector(
+              onLongPress: () {
+                // _popupDialog = _createPopupDialog(data);
+                // Overlay.of(context).insert(_popupDialog);
+              },
+              onLongPressEnd: (details) => _popupDialog?.remove(),
+              child: Image.memory(snapshot.data!, fit: BoxFit.cover),
+            ),
+          );
+        }
+        return SizedBox(
+          child: Shimmer.fromColors(
+            baseColor: Colors.grey.shade300,
+            highlightColor: Colors.grey.shade100,
+            child: SizedBox(
+              child: const DecoratedBox(
+                decoration: const BoxDecoration(
+                  color: Colors.black
+                ),
+              ),
+            ),
+          ),
+        );
+      }
     );
+    
 
   } 
 
-  void _saveLocally(var url) async{
-    var response = await http.get(Uri.parse(url));
-    // Directory? externalStorageDirectory = await getApplicationDocumentsDirectory();
-    
-    // var save_dir = externalStorageDirectory!.path;
-    Directory dir = Directory('"/storage/emulated/0/Pictures/ARApp"');
-    var save_dir = dir.path;
-
-    print(path.join(save_dir, path.basename(url)));
-    new File(path.join(save_dir, path.basename(url))).create(recursive: true).then((file) async{
-      await file.writeAsBytes(response.bodyBytes);
-    });
-    // await file.writeAsBytes(response.bodyBytes);
-
-    // showDialog(
-    //   context:context,
-    //   builder: (BuildContext context) => 
-    //   AlertDialog(
-    //     title: Text("${file.path.toString()}"),
-    //     content: Image.file(file)
-    //   )
-    // );
+  Future<Uint8List?> getFileFromImageUrl(var img_url) async {
+    return (await NetworkAssetBundle(Uri.parse(img_url))
+            .load(img_url))
+            .buffer
+            .asUint8List();
   }
+
+  void _saveLocally(var file_url, var file_name) async{
+    var dir_path = "/storage/emulated/0/Pictures/ARApp";
+
+    var dir_exists = await io.Directory(dir_path).exists();
+    if(!dir_exists){
+      Directory dir = Directory(dir_path);
+      dir.create(recursive: true);
+    }
+
+    var file_exists = await io.File("$dir_path/$file_name").exists();
+    
+    if(!file_exists){
+      HttpClient httpClient = new HttpClient();
+      File file;
+      String filePath = '';
+      String myUrl = '';
+
+      try {
+        myUrl = file_url;
+        var request = await httpClient.getUrl(Uri.parse(myUrl));
+        var response = await request.close();
+        if(response.statusCode == 200) {
+          var bytes = await consolidateHttpClientResponseBytes(response);
+          filePath = '$dir_path/$file_name';
+          file = File(filePath);
+          await file.writeAsBytes(bytes);
+        }
+        else
+          filePath = 'Error code: '+response.statusCode.toString();
+      }
+      catch(ex){
+        filePath = 'Can not fetch url';
+      }
+    }
+
+  }
+
+  //save dialog
+  // final scaffoldMessenger = ScaffoldMessenger.of(context);
+  //   late String message;
+
+  //   // Directory dir = Directory('"/storage/emulated/0/Pictures/ARApp"');
+  //   final http.Response response = await http.get(Uri.parse(url));
+
+  //     // Get temporary directory
+  //     final dir = await getTemporaryDirectory();
+
+  //     // Create an image name
+  //     var filename = '${dir.path}/SaveImage${5}.png';
+
+  //     // Save to filesystem
+  //     final file = File(filename);
+  //     await file.writeAsBytes(response.bodyBytes);
+
+  //     // Ask the user to save it
+  //     final params = SaveFileDialogParams(sourceFilePath: file.path);
+  //     final finalPath = await FlutterFileDialog.saveFile(params: params);
+
+  //     if (finalPath != null) {
+  //       message = 'Image saved to disk';
+  //     }
 
   Widget _loadingGridTileWidget(String data) => Builder(
         builder: (context) => GestureDetector(

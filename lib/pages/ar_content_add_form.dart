@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:bouncing_button/bouncing_button.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_ar_app/auth.dart';
@@ -64,11 +65,10 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
     super.dispose();
   }
 
-  
+  var switchValue = false;
 
   @override
   Widget build(BuildContext context) {
-
     return RefreshIndicator(child: 
       Scaffold(
         appBar: AppBar(
@@ -88,8 +88,12 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
             _selectImageButton(),
             _selectedImage(),
             _selectedImagePreview(),
-            _selectVideoButton(),
-            _selectedVideo(),
+            _selectContentType(),
+            switchValue ? _select3DModelButton() : _selectVideoButton(),
+            switchValue ? _selected3DModel() : _selectedVideo(),
+            switchValue ? _selectImageTextureButton() : SizedBox.shrink(),
+            switchValue ? _selectedImageTexture() : SizedBox.shrink(),
+            switchValue ? _selectedImageTexturePreview() : SizedBox.shrink(),
             _submitButton(),
           ],
         ),
@@ -107,6 +111,22 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
       padding: EdgeInsets.fromLTRB(0, 20, 0, 20), 
       child: Text("Add Content", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, fontFamily: "Montserrat",),),
     );
+  }
+
+  Widget _selectContentType(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Text("3D Model"),
+        CupertinoSwitch(
+                    value: switchValue,
+                    activeColor: AppColors.primaryColor,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        switchValue = value ?? false;
+                      });
+        }),
+    ],);
   }
 
   Widget _selectUserButton(){
@@ -291,10 +311,145 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
     return SizedBox.shrink();
   }
 
+  Uint8List? _3dmodel;
+  String? _3dmodel_extension;
+
+  Widget _select3DModelButton(){
+      return ElevatedButton(
+        onPressed: () {
+          //selectVideo();
+          select3DModel();
+        }, 
+        child: Text("Select 3D Model"),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),  
+            ),
+          ),
+        ),
+      );
+  }
+
+  void select3DModel() async{
+    var picked = await pickFile();
+    Uint8List mod;
+    String mod_extension;
+
+    if(picked != null){
+      mod = picked[0];
+      mod_extension = picked[1];
+
+      setState(() {
+      _3dmodel = mod;
+      _3dmodel_extension = mod_extension;
+    });
+    }
+  }
+
+  Widget _selected3DModel(){
+    if(_3dmodel != null){
+      var mod_size_kb = _3dmodel!.lengthInBytes/(1024);
+      var mod_size_mb = _3dmodel!.lengthInBytes/(1024*1024);
+
+      return Card(
+            child: ListTile(
+              leading: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                    Icon(Icons.all_out_outlined, color: AppColors.primaryColor, size: 30,),
+                ],
+              ),
+              title: Text("3D Model"),
+              subtitle: mod_size_mb > 0.5 ? Text("${mod_size_mb.toStringAsFixed(1)} MB") : Text("${mod_size_kb.toStringAsFixed(1)} KB"),
+              onTap: () {
+                setState(() {
+                  _3dmodel = null;
+                });
+              },
+            ),
+      );
+    }
+    return SizedBox.shrink();
+  }
+
+  Uint8List? _image_texture;
+  String? _image_texture_extension;
+
+
+  void selectImageTexture() async{
+    var picked = await pickImage(ImageSource.gallery);
+    Uint8List img_texture;
+    String? img_texture_extension;
+
+    if(picked != null){
+      img_texture = picked[0];
+      img_texture_extension = picked[1];
+
+      setState(() {
+      _image_texture = img_texture;
+      _image_texture_extension = img_texture_extension;
+    });
+    }
+  }
+  
+  Widget _selectImageTextureButton(){
+      return ElevatedButton(
+        onPressed: () {
+          selectImageTexture();
+        }, 
+        child: Text("Select texture"),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),  
+            ),
+          ),
+        ),
+      );
+  }
+
+  Widget _selectedImageTexture(){
+    if(_image_texture != null){
+      var img_texture_size_kb = _image_texture!.lengthInBytes/(1024);
+      var img_texture_size_mb = _image_texture!.lengthInBytes/(1024*1024);
+
+      return Card(
+            child: ListTile(
+              leading: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                    Icon(Icons.texture, color: AppColors.primaryColor, size: 30,),
+                ],
+              ),
+              title: Text("Texture"),
+              subtitle: img_texture_size_mb > 0.5 ? Text("${img_texture_size_mb.toStringAsFixed(1)} MB") : Text("${img_texture_size_kb.toStringAsFixed(1)} KB"),
+              onTap: () {
+                setState(() {
+                  _image_texture = null;
+                });
+              },
+            ),
+      );
+    }
+    return SizedBox.shrink();
+  }
+
+  Widget _selectedImageTexturePreview(){
+    if(_image_texture != null){
+      return Center(child:Image(image: MemoryImage(_image_texture!)));
+    }
+    return SizedBox.shrink();
+  }
+
   Widget _submitButton(){
       return ElevatedButton(
         onPressed: () {
-          if(_curr_user != null && _image != null && _video != null){
+          if(_curr_user != null && _image != null && (switchValue ? (_3dmodel != null && _image_texture != null) : _video != null )){
             _submitForm();
           }
         },
@@ -337,18 +492,34 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
   void _submitForm() async{
     SmartDialog.showLoading();
 
-    _firebaseRTDB.ref('content').once().then((value) async {
+    _firebaseRTDB.ref('content/${_curr_user?.uid}').once().then((value) async {
       var curr_count = value.snapshot.children.length;
 
       String imageUrl = await _fbStorage.uploadFileToStorage('users/ar/image/${curr_count}', _image!, _image_extension!);
-      String videoUrl = await _fbStorage.uploadFileToStorage('users/ar/video/${curr_count}', _video!, _video_extension!);
+      
+      String fileUrl = "";
+      String fileName = "";
+      String textureUrl = "";
 
-      DatabaseReference ref = _firebaseRTDB.ref("content/${user?.uid}/");
+      if(switchValue){
+        fileUrl = await _fbStorage.uploadFileToStorage('users/ar/3D/${curr_count}.$_3dmodel_extension', _3dmodel!, _3dmodel_extension!);
+        fileName = "$curr_count.$_3dmodel_extension";
+        textureUrl = await _fbStorage.uploadFileToStorage('users/ar/3D/${curr_count}_texture', _image_texture!, _image_texture_extension!);
+      }
+      else{
+        fileUrl = await _fbStorage.uploadFileToStorage('users/ar/video/${curr_count}', _video!, _video_extension!);
+        fileName = "$curr_count.$_video_extension";
+      }
+
+      DatabaseReference ref = _firebaseRTDB.ref("content/${_curr_user?.uid}/");
       await ref.push().set({
-        "uid": user?.uid,
-        "type": "video",
+        "uid": _curr_user?.uid,
+        "type": switchValue ? "3Dmodel" : "video",
         "img_url": imageUrl,
-        "vid_url": videoUrl,
+        "file_url": fileUrl,
+        "img_name": "$curr_count.$_image_extension",
+        "file_name": fileName,
+        "texture_url": textureUrl,
       });
 
     }).then((value){

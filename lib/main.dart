@@ -17,11 +17,13 @@ Future<void> main() async {
   FirebaseDB().firebaseRTDB.setPersistenceEnabled(true);
   FirebaseDB().firebaseRTDB.ref('users').keepSynced(true);
   FirebaseDB().firebaseRTDB.ref('role_requests').keepSynced(true);
+  FirebaseDB().firebaseRTDB.ref('content').keepSynced(true);
 
   SystemChrome.setEnabledSystemUIMode(
     SystemUiMode.manual,
     overlays: [SystemUiOverlay.top]
   );
+
 
   runApp(MaterialApp(
     home: WidgetTree(),
