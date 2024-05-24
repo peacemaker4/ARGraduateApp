@@ -11,7 +11,12 @@ public class FlutterCommunication : MonoBehaviour
     {
         messageManager = GetComponent<UnityMessageManager>();
 
-        messageManager.SendMessageToFlutter("Started");
+        MessageToFlutter("Started");
+    }
+
+    public void MessageToFlutter(string msg)
+    {
+        messageManager.SendMessageToFlutter(msg);
     }
 
 }

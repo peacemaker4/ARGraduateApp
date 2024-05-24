@@ -12137,7 +12137,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultTraceListener_WriteLogFile_m1B03B
 			FileInfo_t62782BBAFA832A78724E4CF2EE96548B8466AB1C* L_6 = V_1;
 			NullCheck(L_6);
 			bool L_7;
-			L_7 = VirtualFuncInvoker0< bool >::Invoke(9, L_6);
+			L_7 = VirtualFuncInvoker0< bool >::Invoke(10, L_6);
 			if (!L_7)
 			{
 				goto IL_0027_1;

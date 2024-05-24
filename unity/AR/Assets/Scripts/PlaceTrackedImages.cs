@@ -9,7 +9,7 @@ public class PlaceTrackedImages : MonoBehaviour
 {
     private ARTrackedImageManager _trackedImagesManager;
 
-    public GameObject[] ArPrefabs;
+    public List<GameObject> ArPrefabs;
 
     private readonly Dictionary<string, GameObject> _instantiatedPrefabs = new Dictionary<string, GameObject>();
 
@@ -40,7 +40,6 @@ public class PlaceTrackedImages : MonoBehaviour
                     && !_instantiatedPrefabs.ContainsKey(imageName))
                 {
                     var newPrefab = Instantiate(curPrefab, trackedImage.transform);
-
                     _instantiatedPrefabs[imageName] = newPrefab;
                 }
             }
