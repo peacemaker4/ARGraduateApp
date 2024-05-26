@@ -35,6 +35,8 @@ dependencies:
   permission_handler: ^11.0.1
   flutter_file_dialog: ^3.0.2
   file_picker: ^5.3.1
+  gallery_image_viewer: ^1.2.0
+  video_player: ^2.7.2
 
 dev_dependencies:
   flutter_test:

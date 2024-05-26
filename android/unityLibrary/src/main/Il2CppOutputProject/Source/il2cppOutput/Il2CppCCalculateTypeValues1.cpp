@@ -1571,7 +1571,7 @@ struct OnValidateInput_t48916A4E9C9FD6204401FF0808C2B7A93D73418B;
 struct SubmitEvent_t1E0F5A2AB28D0DB55AE18E8DA99147D86492DD5D;
 struct JPropertyList_t53D97F8AB016B10A00D616C620766D38449D8C98;
 struct RequestLightsDelegate_t585505A75681754DA53BE119D8611B605F0243BB;
-struct U3CU3Ec__DisplayClass7_0_t5EF748EB2E0D469EDC867D0ABE7F59B33354B878;
+struct U3CU3Ec__DisplayClass8_0_tC1FA9CFF7D3A5096F256811DC83017DEA1F2ADA4;
 struct ARContent_t0869B22441D896C9BA9F0A9EBC02F1DE9E0C9CB8;
 struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
 struct Collection_t5803C7F2B62E7A86E5C5B102A38072927F0AD107;
@@ -5482,20 +5482,20 @@ struct DebugViewPrinter_t3EFC0E78E92DD59B7D0D218A1386C52B45E170BB  : public Runt
 struct U3CU3Ec_t480832E6E9C0D190B837CC90FB7A34286511D2E4  : public RuntimeObject
 {
 };
-struct U3CGetTextureU3Ed__7_t6D54A39A18C4BCFAF04CB5CB1873DB49D501F8DB  : public RuntimeObject
+struct U3CGetTextureU3Ed__8_t0B574736514578CDD7D9A81A847A7ABDB8A9210E  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	ARContent_t0869B22441D896C9BA9F0A9EBC02F1DE9E0C9CB8* ___media;
 	int32_t ___count;
 	LoadCustomContent_t1BA2078A7E69A35222D79C648EEBDD6E1BEA9D69* ___U3CU3E4__this;
-	U3CU3Ec__DisplayClass7_0_t5EF748EB2E0D469EDC867D0ABE7F59B33354B878* ___U3CU3E8__1;
+	U3CU3Ec__DisplayClass8_0_tC1FA9CFF7D3A5096F256811DC83017DEA1F2ADA4* ___U3CU3E8__1;
 	UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___U3CwwwU3E5__2;
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___U3CmyTextureU3E5__3;
 	String_t* ___U3CnameU3E5__4;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___U3CobjU3E5__5;
 };
-struct U3CPopulateImageLibraryU3Ed__6_t8CB94AB07C48035DB4553A325EE2AF3D3C42BCFC  : public RuntimeObject
+struct U3CPopulateImageLibraryU3Ed__7_t62E70DE5F92176C6EA0E5F11BAE1A9E58CBFF18A  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -26275,7 +26275,7 @@ struct ParameterBox_t9E54B01C53B0930CACB39EC347F99CD811725F4A  : public Initiali
 struct Reference_t27CA5B665FEF0B3B581EAE9F05229E1A9D6EEE01  : public InitializeLocalInstruction_t43FFB443CD385ADDA7FC024CDB215348752EEF64
 {
 };
-struct U3CU3Ec__DisplayClass7_0_t5EF748EB2E0D469EDC867D0ABE7F59B33354B878  : public RuntimeObject
+struct U3CU3Ec__DisplayClass8_0_tC1FA9CFF7D3A5096F256811DC83017DEA1F2ADA4  : public RuntimeObject
 {
 	AddReferenceImageJobState_tCF90A84092F3D2A7536D1D28C9E6EC0D7F53937A ___job;
 };
@@ -30948,6 +30948,7 @@ struct LoadCustomContent_t1BA2078A7E69A35222D79C648EEBDD6E1BEA9D69  : public Mon
 	MutableRuntimeReferenceImageLibrary_t51AE6E77B281FCE9DF42C7E905A11935708A53F8* ___myRuntimeReferenceImageLibrary;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___videoPrefab;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___modelPrefab;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___xrOrigin;
 };
 struct LoadModelFromURL_t594E0A906C07E0D102582D1BD3A8E1FE4AF53DC7  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -31104,6 +31105,9 @@ struct SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89  : public MonoBehav
 {
 	VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___videoPlayer;
 	String_t* ___url;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___image_material;
+	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___mat_texture;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___quad;
 };
 struct TMP_ScrollbarEventHandler_t84C389ED6800977DAEA8C025E18C9F3321888F4D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -44558,11 +44562,11 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize9159 = { sizeof(ARContent_t0
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize9160;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9160 = { sizeof(ARContentCollection_t271142F9335D2E0C5F112B6D9E09B067AACF6E0C), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize9161;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9161 = { sizeof(U3CU3Ec__DisplayClass7_0_t5EF748EB2E0D469EDC867D0ABE7F59B33354B878), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9161 = { sizeof(U3CU3Ec__DisplayClass8_0_tC1FA9CFF7D3A5096F256811DC83017DEA1F2ADA4), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize9162;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9162 = { sizeof(U3CGetTextureU3Ed__7_t6D54A39A18C4BCFAF04CB5CB1873DB49D501F8DB), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9162 = { sizeof(U3CGetTextureU3Ed__8_t0B574736514578CDD7D9A81A847A7ABDB8A9210E), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize9163;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9163 = { sizeof(U3CPopulateImageLibraryU3Ed__6_t8CB94AB07C48035DB4553A325EE2AF3D3C42BCFC), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9163 = { sizeof(U3CPopulateImageLibraryU3Ed__7_t62E70DE5F92176C6EA0E5F11BAE1A9E58CBFF18A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize9164;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9164 = { sizeof(LoadCustomContent_t1BA2078A7E69A35222D79C648EEBDD6E1BEA9D69), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize9165;

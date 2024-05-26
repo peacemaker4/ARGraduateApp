@@ -508,6 +508,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c42717ebe6f93f4a8b00dcf28fd8284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1010139590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010139592}
+  - component: {fileID: 1010139591}
+  m_Layer: 0
+  m_Name: LoadCustomContent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1010139591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010139590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efa015bb056b304fbbd817351027c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mARTrackedImageManager: {fileID: 1752429283}
+  videoPrefab: {fileID: 7906824437634666909, guid: 0c0119a02f254e747875bbb9a8469f05,
+    type: 3}
+  modelPrefab: {fileID: 2955221394495957039, guid: 627d46858b7b6d34b95eb9e49d11fe2a,
+    type: 3}
+  xrOrigin: {fileID: 1752429282}
+--- !u!4 &1010139592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010139590}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.69255036, y: 0.6240161, z: 0.72756356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1075000274
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +688,6 @@ GameObject:
   - component: {fileID: 1752429285}
   - component: {fileID: 1752429283}
   - component: {fileID: 1752429287}
-  - component: {fileID: 1752429288}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -708,23 +757,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArPrefabs: []
---- !u!114 &1752429288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752429282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9efa015bb056b304fbbd817351027c40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mARTrackedImageManager: {fileID: 1752429283}
-  videoPrefab: {fileID: 7906824437634666909, guid: 0c0119a02f254e747875bbb9a8469f05,
-    type: 3}
-  modelPrefab: {fileID: 2955221394495957039, guid: 627d46858b7b6d34b95eb9e49d11fe2a,
-    type: 3}
 --- !u!1 &1963898202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,3 +1145,4 @@ SceneRoots:
   - {fileID: 1752429286}
   - {fileID: 919548736}
   - {fileID: 629146110}
+  - {fileID: 1010139592}

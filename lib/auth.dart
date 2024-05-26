@@ -40,6 +40,7 @@ class Auth{
         "username": username,
         "role": "user",
         "img_url": "",
+        "group": "",
       });
     });
   }
@@ -69,7 +70,9 @@ class Auth{
           "uid": cred_uid,
           "email": cred_email,
           "username": username,
-          "role": "user"
+          "role": "user",
+          "img_url": "",
+          "group": "",
         });
       }
     });

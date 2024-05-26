@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:bouncing_button/bouncing_button.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_ar_app/auth.dart';
@@ -56,6 +57,8 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
     controller = BottomSheet.createAnimationController(this);
     AnimationController(vsync: this, duration: Duration(seconds: 1));
 
+    _controllerUsername.text = dbuser.username.toString();
+
     offset = Tween<Offset>(begin: Offset.zero, end: Offset(0.0, 1.0))
         .animate(controller);
   }
@@ -89,66 +92,28 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
   void saveProfile() async{
     // var mime = lookupMimeType('', headerBytes: _image);
     // var extension = extensionFromMime(mime!);
-
-    String imageUrl = await _fbStorage.uploadFileToStorage('users/profile/${user?.uid}', _image!, _extension!);
-  
+    
+    String imageUrl = "";
+    
+    if(_image != null){
+      imageUrl = await _fbStorage.uploadFileToStorage('users/profile/${user?.uid}', _image!, _extension!);
+    }
+    else{
+      imageUrl = dbuser.img_url!;
+    }
+    
     DatabaseReference ref = _firebaseRTDB.ref("users/${user?.uid}");
       await ref.set({
         "uid": user?.uid,
         "email": user?.email,
-        "username": dbuser.username,
+        "username": _controllerUsername.text,
         "role": dbuser.role,
+        "group": dbuser.group,
         "img_url": "${imageUrl}"
       });
-  }
 
-  Widget _userInfo(){
-    return Column(
-            children: [
-              SettingsItem(
-                onTap: () {},
-                icons: Icons.email,
-                iconStyle: IconStyle(backgroundColor: AppColors.primaryColor),
-                title: 'Email',
-                subtitle: '${user?.email}',
-                trailing: Text(""),
-              ),
-              SettingsItem(
-                onTap: () {},
-                icons: Icons.insert_link_rounded,
-                iconStyle: IconStyle(backgroundColor: AppColors.primaryColor),
-                title: 'UID',
-                subtitle: '${dbuser.uid}',
-                trailing: Text(""),
-              ),
-              SettingsItem(
-                onTap: () {},
-                icons: Icons.person,
-                iconStyle: IconStyle(backgroundColor: AppColors.primaryColor),
-                title: 'Username',
-                subtitle: '${dbuser.username}',
-                trailing: Text(""),
-              ),
-              SettingsItem(
-                onTap: () {
-                  _roleModalScreen(dbuser.role);
-                },
-                icons: Icons.co_present_rounded,
-                iconStyle: IconStyle(backgroundColor: AppColors.primaryColor),
-                title: 'Role',
-                subtitle: '${dbuser.role}',
-              ),
-              SettingsItem(
-                onTap: () {
-                  _roleModalScreen(dbuser.role);
-                },
-                icons: Icons.co_present_rounded,
-                iconStyle: IconStyle(backgroundColor: AppColors.primaryColor),
-                title: 'img_url',
-                subtitle: '${dbuser.img_url}',
-              ),
-            ],
-          );
+    Navigator.pop(context, true);
+    
   }
 
   void _roleModalScreen(role){
@@ -163,32 +128,6 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
     );
   }
 
-  Widget _bouncingButton(){
-    return BouncingButton(
-              upperBound: 0.1,
-              duration: Duration(milliseconds: 100),
-              child: Container(
-                height: 45,
-                width: 270,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100.0),
-                  color: Color.fromARGB(255, 57, 123, 255),
-                ),
-                child: const Center(
-                  child: Text(
-                    'Upload image',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                )),
-                onPressed: (){
-                  selectImage();
-                }
-            );
-  }
 
   Widget _saveButton(){
     return BouncingButton(
@@ -227,7 +166,6 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
   late final TextEditingController _controllerUsername = TextEditingController();
 
   Widget _usernameInput() {
-    _controllerUsername.text = dbuser.username.toString();
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: TextFormField(
@@ -286,11 +224,87 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
           floatingLabelBehavior: FloatingLabelBehavior.always,
           hintStyle: TextStyle(color: Color.fromARGB(255, 200, 200, 200),fontFamily: "Montserrat", fontSize: 14),
           border: OutlineInputBorder(
-            borderSide: BorderSide(width: 1.0),
+            borderSide: BorderSide(width: 1.0, color: Colors.transparent),
             borderRadius: BorderRadius.all(Radius.circular(18))
           ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(width: 1.5, color: Colors.blue),
+          enabled: false,
+          disabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(width: 0.5, color: Colors.grey),
+            borderRadius: BorderRadius.all(Radius.circular(18))
+          ),
+          
+          
+        ),
+        onTapOutside: (event) => FocusScope.of(context).unfocus(),
+        style: const TextStyle(
+          fontWeight: FontWeight.w500,
+          color: Color.fromARGB(255, 134, 134, 134),
+        ),
+      ),
+    );
+  }
+
+  Widget _groupInput(){
+    if(!dbuser.group!.isEmpty){
+      return FutureBuilder(
+        future: FirebaseDB().firebaseRTDB.ref('groups/${dbuser.group!}').once(), 
+        builder: (context, snapshot){
+          if(snapshot.hasData){
+            var data = snapshot.data!.snapshot.value as Map;
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: TextFormField(
+                initialValue: data["group_name"],
+                readOnly: true,
+                decoration: InputDecoration(
+                  icon: Icon(Icons.groups),
+                  contentPadding: EdgeInsets.fromLTRB(18, 24, 12, 16),
+                  labelText: "Group",
+                  labelStyle: TextStyle(fontFamily: "Montserrat"),
+                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  hintStyle: TextStyle(color: Color.fromARGB(255, 200, 200, 200),fontFamily: "Montserrat", fontSize: 14),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1.0, color: Colors.transparent),
+                    borderRadius: BorderRadius.all(Radius.circular(18))
+                  ),
+                  enabled: false,
+                  disabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 0.5, color: Colors.grey),
+                    borderRadius: BorderRadius.all(Radius.circular(18))
+                  ),
+                  
+                ),
+                onTapOutside: (event) => FocusScope.of(context).unfocus(),
+                style: const TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromARGB(255, 134, 134, 134),
+                ),
+              ),
+            );
+          }
+          return SizedBox.shrink();
+        }
+      );
+    }
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20),
+      child: TextFormField(
+        initialValue: "Not set",
+        readOnly: true,
+        decoration: InputDecoration(
+          icon: Icon(Icons.groups),
+          contentPadding: EdgeInsets.fromLTRB(18, 24, 12, 16),
+          labelText: "Group",
+          labelStyle: TextStyle(fontFamily: "Montserrat"),
+          floatingLabelBehavior: FloatingLabelBehavior.always,
+          hintStyle: TextStyle(color: Color.fromARGB(255, 200, 200, 200),fontFamily: "Montserrat", fontSize: 14),
+          border: OutlineInputBorder(
+            borderSide: BorderSide(width: 1.0, color: Colors.transparent),
+            borderRadius: BorderRadius.all(Radius.circular(18))
+          ),
+          enabled: false,
+          disabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(width: 0.5, color: Colors.grey),
             borderRadius: BorderRadius.all(Radius.circular(18))
           ),
           
@@ -298,8 +312,69 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
         onTapOutside: (event) => FocusScope.of(context).unfocus(),
         style: const TextStyle(
           fontWeight: FontWeight.w500,
-          color: Colors.black,
+          color: Color.fromARGB(255, 134, 134, 134),
         ),
+      ),
+    );
+  }
+
+  void _profileImageActionSheet() {
+    showCupertinoModalPopup<void>(
+      context: context,
+      builder: (BuildContext context) => CupertinoActionSheet(
+        title: Text("Profile image", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),),
+        actions: <Widget>[
+          CupertinoActionSheetAction(
+            /// This parameter indicates the action would be a default
+            /// default behavior, turns the action's text to bold text.
+            onPressed: () {
+              selectImage();
+              Navigator.pop(context);
+            },
+            child: 
+              Wrap(
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  SizedBox(width: 7,),
+                  Text(
+                    'Pick from Gallery',
+                    style: TextStyle(color: AppColors.primaryColor, fontSize: 16)
+                  ),
+                  SizedBox(width: 7,),
+                  Icon(
+                    Icons.image_search_rounded,
+                    color: AppColors.primaryColor,
+                  ),
+                ],
+              )
+          ),
+          CupertinoActionSheetAction(
+            onPressed: () {
+              dbuser.img_url = "";
+              _image = null;
+              setState(() {});
+              Navigator.pop(context);
+            },
+            child: 
+              Wrap(
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  Text(
+                    'Remove current image',
+                    style: TextStyle(color: Colors.red, fontSize: 16)
+                  ),
+                  
+                ],
+              )
+          ),
+          CupertinoActionSheetAction(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('Cancel', style: TextStyle(fontSize: 16, color: Colors.grey)),
+          )
+        ],
+        
       ),
     );
   }
@@ -316,6 +391,21 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
         // title: const Text('ARGraduateApp', style: TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w500)), //, style: TextStyle(fontFamily: "Poppins", weight: 100)
         // centerTitle: true,
         ),
+        floatingActionButton: Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 10), child: 
+          Container(
+                width: 64,
+                height: 64,
+                child:FloatingActionButton(
+            backgroundColor: AppColors.primaryColor,
+            elevation: 10,
+            tooltip: 'Save profile',
+            //shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            onPressed: (){
+              saveProfile();
+            },
+            child: const Icon(Icons.edit, color: Colors.white, size: 24),
+          )
+        )),
         body: Padding(
         padding: EdgeInsets.all(0),
         child: Container(
@@ -329,34 +419,55 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
                   SizedBox(
                     height: 25,
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      _image != null ?
-                                CircleAvatar(
-                        radius: 48, 
-                        backgroundImage: MemoryImage(_image!),
-                      )
-                      :
-                      (dbuser.img_url != ""
-                      ?
-                        CircleAvatar(
-                          radius: 48,
-                          backgroundColor: Colors.grey.shade300,
-                          backgroundImage:
-                            NetworkImage(dbuser.img_url!),
+                  SizedBox(
+                  height: 98,
+                  width: 98
+                  ,
+                  child:
+                    Stack(
+                      clipBehavior: Clip.none,
+                      fit: StackFit.expand,
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      // crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _image != null ?
+                                  CircleAvatar(
+                          radius: 48, 
+                          backgroundImage: MemoryImage(_image!),
                         )
-                      :
-                        CircleAvatar(
-                          radius: 48,
-                          backgroundColor: Colors.grey.shade300,
-                          backgroundImage: 
-                            AssetImage('assets/images/default_avatar.png'),
+                        :
+                        (dbuser.img_url != ""
+                        ?
+                          CircleAvatar(
+                            radius: 48,
+                            backgroundColor: Colors.grey.shade300,
+                            backgroundImage:
+                              NetworkImage(dbuser.img_url!),
+                          )
+                        :
+                          CircleAvatar(
+                            radius: 48,
+                            backgroundColor: Colors.grey.shade300,
+                            backgroundImage: 
+                              AssetImage('assets/images/default_avatar.png'),
+                          )
                         )
-                      )
-                      ,
-                    ],
+                        ,
+                        Positioned(
+                          bottom: 0,
+                          right: -25,
+                          child: RawMaterialButton(
+                            onPressed: () {
+                              _profileImageActionSheet();
+                            },
+                            elevation: 2.0,
+                            fillColor: Color(0xFFF5F6F9),
+                            child: Icon(Icons.camera_alt_outlined, color: AppColors.primaryColor,),
+                            padding: EdgeInsets.all(10.0),
+                            shape: CircleBorder(),
+                        )),
+                      ],
+                    )
                   ),
                   SizedBox(
                     height: 8,
@@ -370,14 +481,20 @@ class _ProfileEditPageState extends State<ProfileEditPage> with TickerProviderSt
                   SizedBox(
                     height: 20,
                   ),
+                  _usernameInput(),
+                  SizedBox(
+                    height: 4,
+                  ),
                   _emailInput(),
                   SizedBox(
                     height: 4,
                   ),
-                  _usernameInput(),
+                  _groupInput(),
+                  SizedBox(
+                    height: 4,
+                  ),
                   // _userInfo(),
-                  _bouncingButton(),
-                  _saveButton()
+                  //_saveButton()
                       ],
                     ),
             ),

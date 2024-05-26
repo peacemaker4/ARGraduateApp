@@ -35,12 +35,12 @@ static const Il2CppMethodExecutionContextInfoIndex g_methodExecutionContextInfoI
 IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_ImageConversionModule[];
 Il2CppSequencePoint g_sequencePointsUnityEngine_ImageConversionModule[6] = 
 {
-	{ 67457, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 },
-	{ 67457, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 },
-	{ 67457, 1, 54, 54, 9, 10, 0, kSequencePointKind_Normal, 0, 2 },
-	{ 67457, 1, 55, 55, 13, 48, 1, kSequencePointKind_Normal, 0, 3 },
-	{ 67457, 1, 55, 55, 13, 48, 4, kSequencePointKind_StepOut, 0, 4 },
-	{ 67457, 1, 56, 56, 9, 10, 12, kSequencePointKind_Normal, 0, 5 },
+	{ 67456, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 },
+	{ 67456, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 },
+	{ 67456, 1, 54, 54, 9, 10, 0, kSequencePointKind_Normal, 0, 2 },
+	{ 67456, 1, 55, 55, 13, 48, 1, kSequencePointKind_Normal, 0, 3 },
+	{ 67456, 1, 55, 55, 13, 48, 4, kSequencePointKind_StepOut, 0, 4 },
+	{ 67456, 1, 56, 56, 9, 10, 12, kSequencePointKind_Normal, 0, 5 },
 };
 #else
 extern Il2CppSequencePoint g_sequencePointsUnityEngine_ImageConversionModule[];

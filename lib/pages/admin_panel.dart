@@ -8,8 +8,10 @@ import 'package:flutter_ar_app/auth.dart';
 import 'package:flutter_ar_app/firebasedb.dart';
 import 'package:flutter_ar_app/models/DBUser.dart';
 import 'package:flutter_ar_app/pages/ar_content_add_form.dart';
+import 'package:flutter_ar_app/pages/groups_page.dart';
 import 'package:flutter_ar_app/pages/profile_edit.dart';
 import 'package:flutter_ar_app/pages/role_request_modal.dart';
+import 'package:flutter_ar_app/pages/users_page.dart';
 import 'package:intl/intl.dart';
 
 import '../values/app_colors.dart';
@@ -61,7 +63,14 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
           var count = snapshot.data!.snapshot.children.length;
           var dt_now = DateTime.now();
 
-          return Container(
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => UsersPage()),
+              );
+            },
+            child: Container(
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.blue,
@@ -75,7 +84,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                 children: [
                   SizedBox(
                     child: Icon(
-                      Icons.people,
+                      Icons.person,
                       color: Colors.white,
                     ),
                   ),
@@ -126,7 +135,95 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                   )
                 ],
               ),
-            );
+            ),) ;
+        }
+        else{
+          return CircularProgressIndicator();
+        }
+      });
+  }
+
+  Widget _groupsInfo(){
+    return FutureBuilder(
+      future: FirebaseDB().firebaseRTDB.ref('groups').once(), 
+      builder: (context, snapshot){
+        if(snapshot.hasData){
+          var count = snapshot.data!.snapshot.children.length;
+          var dt_now = DateTime.now();
+
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => GroupsPage()),
+              );
+            },
+            child: Container(
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                border: Border.all(
+                  width: 2, 
+                  color: Colors.blue,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(15))
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    child: Icon(
+                      Icons.groups,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 22),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Groups",
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14
+                            ),
+                          ),
+                          Text(
+                            "${DateFormat('dd MMMM  kk:mm').format(dt_now)}",
+                            style: Theme.of(context)
+                              .textTheme
+                              .bodySmall!
+                              .copyWith(color: Colors.white70),
+                          ),
+                          
+                        ],
+                      )
+                    )
+                  ),
+                  Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Text(
+                        "${count}",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18
+                        )
+                      ),
+                      SizedBox(width: 7,),
+                      Icon(
+                        Icons.circle,
+                        size: 7,
+                        color: Colors.white,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),) ;
         }
         else{
           return CircularProgressIndicator();
@@ -142,7 +239,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
           var count = snapshot.data!.snapshot.children.length;
           var dt_now = DateTime.now();
 
-          return Container(
+          return InkWell(child: Container(
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.deepOrange,
@@ -207,7 +304,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                   )
                 ],
               ),
-            );
+            ),);
         }
         else{
           return CircularProgressIndicator();
@@ -241,46 +338,11 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
             _header(),
             _usersInfo(),
             SizedBox(height: 15,),
+            _groupsInfo(),
+            SizedBox(height: 15,),
             _contentInfo(),
             SizedBox(height: 15,),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ARContentAddFormPage()),
-                );
-              },
-              child: Padding(
-                padding: EdgeInsets.all(15), 
-                child: Wrap(
-                  spacing: 7,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Text(
-                      "Add user photo",
-                      style: TextStyle(
-                        color: Colors.white,
-                      )
-                    ),
-                    Icon(
-                      Icons.image,
-                      size: 15,
-                      color: Colors.white,
-                    ),
-                  ],
-                )
-              ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.orange),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),  
-                  ),
-                ),
-
-              ),
-              
-            ),
+            _addARContentButton(),
           ],
         ),
       )), 
@@ -289,6 +351,47 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
           
         });
       },
+    );
+  }
+
+  Widget _addARContentButton(){
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ARContentAddFormPage()),
+        );
+      },
+      child: Padding(
+        padding: EdgeInsets.all(15), 
+        child: Wrap(
+          spacing: 7,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            Text(
+              "Add user photo",
+              style: TextStyle(
+                color: Colors.white,
+              )
+            ),
+            Icon(
+              Icons.image,
+              size: 15,
+              color: Colors.white,
+            ),
+          ],
+        )
+      ),
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.orange),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),  
+          ),
+        ),
+
+      ),
+      
     );
   }
 

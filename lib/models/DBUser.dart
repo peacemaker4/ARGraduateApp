@@ -4,6 +4,7 @@ class DBUser {
   String? username;
   String? role;
   String? img_url;
+  String? group;
   
   DBUser({
     this.uid,
@@ -11,6 +12,7 @@ class DBUser {
     this.username,
     this.role,
     this.img_url,
+    this.group,
   });
 
   factory DBUser.fromJson(Map<String, dynamic> json) {
@@ -20,6 +22,7 @@ class DBUser {
       username: json['username'],
       role: json['role'],
       img_url: json['img_url'],
+      group: json['group'],
     );
   }
 }

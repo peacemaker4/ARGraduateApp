@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 813de581a7d3e714c90554bb76a322b5, type: 2}
+  - {fileID: 2100000, guid: acd108e00a8e29543be1b3d21de37335, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,7 +135,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 1
@@ -188,3 +188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 6769225572586037492}
   url: 
+  image_material: {fileID: 2100000, guid: acd108e00a8e29543be1b3d21de37335, type: 2}
+  mat_texture: {fileID: 0}
+  quad: {fileID: 1041376535998831064}

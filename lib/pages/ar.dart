@@ -28,24 +28,27 @@ class _ARPageState extends State<ARPage> {
     
     return Scaffold(
       key: _scaffoldKey,
-      body:SafeArea(
-          bottom: false,
-          child: WillPopScope(
-            onWillPop: () async {
-              return true;
-            },
-            child: Container(
-              color: Color.fromARGB(255, 0, 0, 0),
-              child: UnityWidget(
-                onUnityCreated: onUnityCreated,
-                onUnitySceneLoaded: onUnitySceneLoaded,
-                onUnityMessage: onUnityMessage,
-                fullscreen: true,
-              ),
-            ) ,
+      body: Card(
+          margin: const EdgeInsets.all(8),
+          clipBehavior: Clip.antiAlias,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
           ),
-      ) 
-    );
+          child: Stack(
+            children: <Widget>[
+              Container(
+                color: Colors.black,
+                child: UnityWidget(
+                  onUnityCreated: onUnityCreated,
+                  onUnitySceneLoaded: onUnitySceneLoaded,
+                  onUnityMessage: onUnityMessage,
+                  fullscreen: false,
+                ),
+              ),
+              
+           
+            ]
+    )));
   }
 
   void sendAvailableContext() {
@@ -72,26 +75,16 @@ class _ARPageState extends State<ARPage> {
 
       // var data = list.map((e) => jsonEncode(e));
 
-      
-
       var data = value.snapshot.value as Map;
-
-      // Fluttertoast.showToast(
-      //   msg: '${data.toString()}',
-      //   toastLength: Toast.LENGTH_LONG,
-      //   gravity: ToastGravity.CENTER,
-      //   timeInSecForIosWeb: 1,
-      //   backgroundColor: Colors.red,
-      //   textColor: Colors.white,
-      //   fontSize: 16.0
-      // );
 
       var json = jsonEncode(data.values.toList());
 
+      var input = "{\"content\": ${json}}";
+
       _unityWidgetController?.postMessage(
-        "XR Origin (XR Rig)",
+        "LoadCustomContent",
         "LoadContent",
-        json
+        input
       );
 
     });
@@ -102,13 +95,12 @@ class _ARPageState extends State<ARPage> {
   // Callback that connects the created controller to the unity controller
   void onUnityCreated(controller) {
     _unityWidgetController = controller;
-    sendAvailableContext();
+    
   }
 
   void onUnityMessage(message) {
     if(message.toString() == "Started"){
-      // sendAvailableContext();
-      
+      sendAvailableContext();
     }
     else{
       Fluttertoast.showToast(

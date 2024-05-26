@@ -5,16 +5,25 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:video_player/video_player.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
 
 import '../auth.dart';
 import '../firebasedb.dart';
 import 'dart:io' as io;
 
-class Videos extends StatelessWidget {
+import '../values/app_colors.dart';
+
+class Videos extends StatefulWidget {
   Videos({Key? key}) : super(key: key);
-  late OverlayEntry _popupDialog;
- 
+  
+  @override
+  State<Videos> createState() => _VideosState();
+
+}
+
+class _VideosState extends State<Videos> {
+
   @override
   Widget build(BuildContext context) {
     var ft = FirebaseDB().firebaseRTDB.ref('content/${Auth().currentUser?.uid}/').once();
@@ -58,20 +67,74 @@ class Videos extends StatelessWidget {
 
     var thumbnail = getThumbnailFromVideoUrl(vid_url);
 
+    var vid_controller = VideoPlayerController.networkUrl(Uri.parse(
+      vid_url))
+    ..initialize().then((_) {
+      
+      // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+    });
+
     return FutureBuilder(
       future: thumbnail,
       builder:(context, snapshot) {
         if(snapshot.hasData){
           // _saveLocally(vid_url, vid_name);
           return Builder(
-            builder: (context) => GestureDetector(
-              onLongPress: () {
-                // _popupDialog = _createPopupDialog(data);
-                // Overlay.of(context).insert(_popupDialog);
-              },
-              onLongPressEnd: (details) => _popupDialog?.remove(),
+            builder: (context) => Stack(
+                      clipBehavior: Clip.none,
+                      fit: StackFit.expand,
+                      children: [ GestureDetector(
               child: Image.memory(snapshot.data!, fit: BoxFit.cover),
             ),
+            Positioned(
+              bottom: 40,
+              right: 20,
+              child: RawMaterialButton(
+                onPressed: () {
+                  showDialog<String>(
+                  context: context,
+                  builder: (BuildContext context) => Dialog(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Padding(padding: EdgeInsets.fromLTRB(10, 10, 10, 5), child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Center(
+                          child: vid_controller.value.isInitialized
+                              ? AspectRatio(
+                                  aspectRatio: vid_controller.value.aspectRatio,
+                                  child: VideoPlayer(vid_controller),
+                                )
+                              : Container(),
+                        ),
+                        ElevatedButton(
+                            style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.white)),
+                            onPressed: () {
+                              setState(() {
+                                vid_controller.value.isPlaying
+                                    ? vid_controller.pause()
+                                    : vid_controller.play();
+                              });
+                            },
+                            child: Icon(
+                              vid_controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+                              color: AppColors.primaryColor,
+                            ),
+                          ),
+                      ],
+                    ),
+                  )
+                ),) ;
+                },
+                elevation: 2.0,
+                fillColor: Color(0xFFF5F6F9),
+                child: Icon(Icons.play_arrow, color: AppColors.primaryColor,),
+                padding: EdgeInsets.all(10.0),
+                shape: CircleBorder(),
+            )),
+            ]),
           );
         }
         return SizedBox(

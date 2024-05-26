@@ -21,6 +21,8 @@ public class LoadCustomContent : MonoBehaviour
 
     [SerializeField] GameObject modelPrefab;
 
+    [SerializeField] GameObject xrOrigin;
+
     private void Start()
     {
         myRuntimeReferenceImageLibrary = mARTrackedImageManager.CreateRuntimeLibrary() as MutableRuntimeReferenceImageLibrary;
@@ -28,7 +30,7 @@ public class LoadCustomContent : MonoBehaviour
         //Texture2D texture = new Texture2D(8, 8);
         //texture.LoadImage(byteArray);
 
-        LoadContent("{\"content\": [{\"file_name\": \"0.obj\", \"file_url\": \"https://firebasestorage.googleapis.com/v0/b/argraduateapp.appspot.com/o/users%2Far%2F3D%2F0.obj?alt=media&token=f3dcdbd3-7de2-49f7-9b2d-30c63af8a506\", \"img_name\": \"0.jpg\", \"img_url\": \"https://firebasestorage.googleapis.com/v0/b/argraduateapp.appspot.com/o/users%2Far%2Fimage%2F0?alt=media&token=d81ef74e-6614-46cf-9bcb-a811eee20ce8\",\"uid\": \"aLcNSExXOIOIQTcQeU5i4cDy1WD2\", \"type\": \"3Dmodel\", \"texture_url\": \"https://firebasestorage.googleapis.com/v0/b/argraduateapp.appspot.com/o/users%2Far%2F3D%2F0_texture?alt=media&token=e260a40a-41bb-4dd7-a3b2-9d29b77d5176\"}]}");
+        //LoadContent("{\"content\": [{\"file_name\": \"0.obj\", \"file_url\": \"https://firebasestorage.googleapis.com/v0/b/argraduateapp.appspot.com/o/users%2Far%2F3D%2F0.obj?alt=media&token=f3dcdbd3-7de2-49f7-9b2d-30c63af8a506\", \"img_name\": \"0.jpg\", \"img_url\": \"https://firebasestorage.googleapis.com/v0/b/argraduateapp.appspot.com/o/users%2Far%2Fimage%2F0?alt=media&token=d81ef74e-6614-46cf-9bcb-a811eee20ce8\",\"uid\": \"aLcNSExXOIOIQTcQeU5i4cDy1WD2\", \"type\": \"3Dmodel\", \"texture_url\": \"https://firebasestorage.googleapis.com/v0/b/argraduateapp.appspot.com/o/users%2Far%2F3D%2F0_texture?alt=media&token=e260a40a-41bb-4dd7-a3b2-9d29b77d5176\"}]}");
 
         //var texture = Resources.Load("Spider") as Texture2D;
         //Debug.Log("Texture Name:" + texture.name);
@@ -45,6 +47,7 @@ public class LoadCustomContent : MonoBehaviour
         //mARTrackedImageManager.maxNumberOfMovingImages = 1;
         //mARTrackedImageManager.trackedImagePrefab = mTrackedImagePrefab;
         //mARTrackedImageManager.enabled = true;
+
     }
 
     public void LoadContent(string content)
@@ -54,7 +57,7 @@ public class LoadCustomContent : MonoBehaviour
         //print(data.ToString());
 
         //var msg_manager = GameObject.FindWithTag("UnityMessageManager");
-        //msg_manager.GetComponent<FlutterCommunication>().MessageToFlutter(data.ToString());
+        //msg_manager.GetComponent<FlutterCommunication>().MessageToFlutter(content.ToString());
 
         StartCoroutine(PopulateImageLibrary(data.content));
     }
@@ -106,17 +109,18 @@ public class LoadCustomContent : MonoBehaviour
                     obj.name = name;
                     obj.GetComponent<LoadModelFromURL>().model_url = media.file_url;
                     obj.GetComponent<LoadModelFromURL>().texture_url = media.texture_url;
-                    GetComponent<PlaceTrackedImages>().ArPrefabs.Add(obj);
+                    xrOrigin.GetComponent<PlaceTrackedImages>().ArPrefabs.Add(obj);
                     obj.SetActive(false);
                 }
                 if (media.type == "video")
                 {
                     obj = Instantiate(videoPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-                    Instantiate(videoPrefab);
+                    
                     //obj = PrefabUtility.InstantiatePrefab(videoPrefab) as GameObject;
                     obj.name = name;
                     obj.GetComponent<SetVideoURL>().url = media.file_url;
-                    GetComponent<PlaceTrackedImages>().ArPrefabs.Add(obj);
+                    obj.GetComponent<SetVideoURL>().mat_texture = myTexture;
+                    xrOrigin.GetComponent<PlaceTrackedImages>().ArPrefabs.Add(obj);
                     obj.SetActive(false);
                 }
 
