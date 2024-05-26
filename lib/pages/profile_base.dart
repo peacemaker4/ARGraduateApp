@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ar_app/pages/group_members_page_users.dart';
 import 'package:flutter_ar_app/pages/models_list.dart';
 import 'package:flutter_ar_app/pages/profile_edit.dart';
 import 'package:flutter_ar_app/pages/videos.dart';
@@ -9,6 +10,7 @@ import 'package:shimmer/shimmer.dart';
 import '../auth.dart';
 import '../firebasedb.dart';
 import '../models/DBUser.dart';
+import '../models/Group.dart';
 import 'admin_panel.dart';
 import 'gallery.dart';
 
@@ -33,7 +35,7 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
       child: Scaffold(
       // backgroundColor: Color.fromARGB(255, 244, 242, 244),
       body: DefaultTabController(
-        length: 3,
+        length: 2,
         child: NestedScrollView(
           headerSliverBuilder: (context, _) {
             return [
@@ -58,10 +60,17 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                   indicatorColor: AppColors.primaryColor,
                   tabs: [
                     Tab(
-                      icon: Icon(
-                        Icons.grid_on_rounded,
-                        color: AppColors.primaryColor,
-                      ),
+                      icon: Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                        // SizedBox(width: 5,),
+                        // Text("Memories"),
+                        // SizedBox(width: 5,),
+                        Icon(
+                          Icons.grid_on,
+                          color: AppColors.primaryColor,
+                        ),
+                      ],) ,
                     ),
                     Tab(
                       icon: Icon(
@@ -69,12 +78,12 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                         color: AppColors.primaryColor,
                       ),
                     ),
-                    Tab(
-                      icon: Icon(
-                        Icons.file_present_sharp,
-                        color: AppColors.primaryColor,
-                      ),
-                    ),
+                    // Tab(
+                    //   icon: Icon(
+                    //     Icons.file_present_sharp,
+                    //     color: AppColors.primaryColor,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -83,7 +92,7 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                   children: [
                     Gallery(),
                     Videos(),
-                    ModelsList(),
+                    //ModelsList(),
                   ],
                 ),
               ),
@@ -110,6 +119,8 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
           // var user = DBUser.fromJson(jsonDecode(data.toString()));
           var img_url = data['img_url'];
           
+          var group_name = "";
+
           return Container(
             width: double.infinity,
             decoration: BoxDecoration(color: Colors.white),
@@ -141,74 +152,7 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                             AssetImage('assets/images/default_avatar.png'),
                         )
                       ,
-                      // Row(
-                      //   children: [
-                      //     Column(
-                      //       children: [
-                      //         Text(
-                      //           "10",
-                      //           style: TextStyle(
-                      //             fontSize: 15,
-                      //             fontWeight: FontWeight.w700,
-                      //           ),
-                      //         ),
-                      //         Text(
-                      //           "Posts",
-                      //           style: TextStyle(
-                      //             fontSize: 15,
-                      //             letterSpacing: 0.4,
-                      //           ),
-                      //         )
-                      //       ],
-                      //     ),
-                      //     SizedBox(
-                      //       width: 30,
-                      //     ),
-                      //     Column(
-                      //       children: [
-                      //         Text(
-                      //           "0",
-                      //           style: TextStyle(
-                      //             fontSize: 15,
-                      //             fontWeight: FontWeight.w700,
-                      //           ),
-                      //         ),
-                      //         Text(
-                      //           "Followers",
-                      //           style: TextStyle(
-                      //             letterSpacing: 0.4,
-                      //             fontSize: 15,
-                      //           ),
-                      //         )
-                      //       ],
-                      //     ),
-                      //     SizedBox(
-                      //       width: 30,
-                      //     ),
-                      //     Column(
-                      //       children: [
-                      //         Text(
-                      //           "0",
-                      //           style: TextStyle(
-                      //             letterSpacing: 0.4,
-                      //             fontSize: 15,
-                      //             fontWeight: FontWeight.w700,
-                      //           ),
-                      //         ),
-                      //         Text(
-                      //           "Following",
-                      //           style: TextStyle(
-                      //             letterSpacing: 0.4,
-                      //             fontSize: 15,
-                      //           ),
-                      //         )
-                      //       ],
-                      //     ),
-                      //     SizedBox(
-                      //       width: 15,
-                      //     ),
-                      //   ],
-                      // )
+                      
                     ],
                   ),
                   SizedBox(
@@ -226,15 +170,28 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                   SizedBox(
                     height: 4,
                   ),
-                  Text(
+                  // Text(
+                  //   '${user?.email}',
+                  //   style: TextStyle(
+                  //     letterSpacing: 0.4,
+                  //   ),
+                  // ),
+                  // SizedBox(
+                  //   height: 4,
+                  // ),
+                  data["group"] != "" ? 
+                  _groupName(data["group"])
+                   : Text(
                     '${user?.email}',
                     style: TextStyle(
                       letterSpacing: 0.4,
                     ),
-                  ),
+                  )
+                  ,
                   SizedBox(
-                    height: 20,
+                    height: 12,
                   ),
+
                   Row(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
@@ -330,6 +287,53 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
     );
   }
 
+  Widget _groupName(var group_id){
+    return FutureBuilder(
+      future: FirebaseDB().firebaseRTDB.ref('groups/${group_id}').once(), 
+      builder: (context, snapshot){
+        if(snapshot.hasData){
+          var data = snapshot.data!.snapshot.value as Map;
+          return Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            FilterChip(
+                    backgroundColor: AppColors.primaryColor,
+                    label: Text('${data["institution"]}', 
+                    style: TextStyle(
+                      color: Colors.white,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.bold
+                    )),
+                    onSelected: (value) {
+                      
+                    },
+                  ),
+                  SizedBox(width: 5,),
+                  FilterChip(
+                    backgroundColor: AppColors.primaryColor,
+                    label: Text('${data["group_name"]}', 
+                    style: TextStyle(
+                      color: Colors.white,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.bold
+                    )),
+                    onSelected: (value) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => GroupMembersPageUsers(group: Group(
+                              id: group_id, 
+                              group_name: data["group_name"], 
+                            ))),
+                      );
+                    },
+                  ),
+          ],) ;
+        }
+        return SizedBox.shrink();
+      }
+    );
+
+  }
+
   Widget _editProfileButton(var data){
     return ElevatedButton(
           onPressed: () {
@@ -341,11 +345,17 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                     email: user?.email, 
                     username: data['username'], 
                     role: data['role'], 
-                    img_url: data['img_url']
+                    img_url: data['img_url'],
+                    group: data['group'],
                   )
                 )
               ),
-            );
+            ).then((value){
+              if(value != null){
+                setState(() {});
+              }
+            });
+            
           },
           child: Padding(
             padding: EdgeInsets.all(15), 

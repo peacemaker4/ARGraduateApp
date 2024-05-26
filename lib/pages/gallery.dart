@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_file_dialog/flutter_file_dialog.dart';
+import 'package:gallery_image_viewer/gallery_image_viewer.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shimmer/shimmer.dart';
@@ -15,10 +16,14 @@ import 'package:path/path.dart' as path;
 import 'package:http/http.dart' as http;
 import 'dart:io' as io;
 
+import '../values/app_colors.dart';
+
 class Gallery extends StatefulWidget {
   @override
   _GalleryState createState() => _GalleryState();
 }
+
+late List<ImageProvider> _imageProviders;
 
 class _GalleryState extends State<Gallery> {
   late OverlayEntry _popupDialog;
@@ -40,6 +45,8 @@ class _GalleryState extends State<Gallery> {
           }
 
           var content = snapshot.data?.snapshot.children.toList().reversed;
+
+          _imageProviders = content!.map(_imageProviderGet).toList();
 
           if(content != null){
             return Scaffold(
@@ -63,6 +70,10 @@ class _GalleryState extends State<Gallery> {
       });
   }
 
+  ImageProvider _imageProviderGet(DataSnapshot data){
+    return Image.network(data.child("img_url").value.toString()).image;
+  }
+
   Widget _createGridTileWidget(DataSnapshot data) {
     var img_url = data.child("img_url").value.toString();
     var img_name = data.child("img_name").value.toString();
@@ -76,14 +87,21 @@ class _GalleryState extends State<Gallery> {
       builder:(context, snapshot) {
         if(snapshot.hasData){
           return Builder(
-            builder: (context) => GestureDetector(
-              onLongPress: () {
-                // _popupDialog = _createPopupDialog(data);
-                // Overlay.of(context).insert(_popupDialog);
-              },
-              onLongPressEnd: (details) => _popupDialog?.remove(),
-              child: Image.memory(snapshot.data!, fit: BoxFit.cover),
-            ),
+            builder: (context) => Stack(
+                      clipBehavior: Clip.none,
+                      fit: StackFit.expand,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            final imageProvider = Image.memory(snapshot.data!).image;
+                            showImageViewer(context, imageProvider, useSafeArea: true, immersive: false,
+                            backgroundColor: Colors.transparent);
+                          },
+                          child: Image.memory(snapshot.data!, fit: BoxFit.cover),
+                        ),
+                        
+                      ]
+                        ),
           );
         }
         return SizedBox(
