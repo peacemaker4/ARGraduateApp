@@ -15,48 +15,72 @@ import 'dart:io' as io;
 import '../values/app_colors.dart';
 
 class Videos extends StatefulWidget {
-  Videos({Key? key}) : super(key: key);
+
+  String uid;
+
+  Videos({super.key, required this.uid});
   
   @override
-  State<Videos> createState() => _VideosState();
+  State<Videos> createState() => _VideosState(uid);
 
 }
 
 class _VideosState extends State<Videos> {
 
+  String uid;
+
+  _VideosState(this.uid){}
+
   @override
   Widget build(BuildContext context) {
-    var ft = FirebaseDB().firebaseRTDB.ref('content/${Auth().currentUser?.uid}/').once();
+    var ft = FirebaseDB().firebaseRTDB.ref('content/').once();
 
     return FutureBuilder(
       future: ft, 
       builder: (context, snapshot){
         if(snapshot.hasData){
-          if(snapshot.data!.snapshot.children.isEmpty){
-            return Scaffold(
+          var content = snapshot.data!.snapshot.children.where((x) => x.child("uid").value == uid).toList().reversed;
+
+          if(content.isNotEmpty){
+            return RefreshIndicator(
+              onRefresh:() async {
+                setState(() {
+                  
+                });
+              },
+              child:  Scaffold(
+                      body: GridView.count(
+                        crossAxisCount: 3,
+                        childAspectRatio: 1.0,
+                        children: content!.map(_createGridTileWidget).toList(),
+                      ),
+                    ));
+          }
+          else{
+            return RefreshIndicator(
+              onRefresh:() async {
+                setState(() {
+                  
+                });
+              },
+              child:  Scaffold(
+                body: Center(
+                  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("No videos available", style: TextStyle(color: Colors.grey),), SizedBox(width: 3,) , Icon(Icons.videocam_off_rounded, color: Colors.grey,)],) 
+                ),
+              ));
+          }
+        }
+        return RefreshIndicator(
+          onRefresh:() async {
+            setState(() {
+              
+            });
+          },
+          child:  Scaffold(
               body: Center(
                 child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("No videos available", style: TextStyle(color: Colors.grey),), SizedBox(width: 3,) , Icon(Icons.videocam_off_rounded, color: Colors.grey,)],) 
               ),
-            );
-          }
-
-          var content = snapshot.data?.snapshot.children.where((x) => x.child("type").value == "video").toList().reversed;
-          if(!content!.isEmpty){
-            return Scaffold(
-              body: GridView.count(
-                crossAxisCount: 3,
-                childAspectRatio: 1.0,
-                children: content!.map(_createGridTileWidget).toList(),
-              ),
-            );
-          }
-          
-        }
-        return Scaffold(
-          body: Center(
-            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("No videos available", style: TextStyle(color: Colors.grey),), SizedBox(width: 3,) , Icon(Icons.videocam_off_rounded, color: Colors.grey,)],) 
-          ),
-        );
+            ));
       });
   }
 

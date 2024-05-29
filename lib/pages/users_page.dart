@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ar_app/firebasedb.dart';
 import 'package:flutter_ar_app/models/DBUser.dart';
 import 'package:flutter_ar_app/values/app_colors.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 
 import '../auth.dart';
@@ -31,6 +32,13 @@ class _UsersPageState extends State<UsersPage> {
     return Scaffold(
       appBar: AppBar(title: _search(), centerTitle: true, backgroundColor: Colors.white, foregroundColor: AppColors.primaryColor, ),
       body: FirebaseAnimatedList(
+        defaultChild: 
+        Center(
+          child: SpinKitRipple(
+              color: AppColors.primaryColor,
+              size: 50.0,
+          )
+        ),
         query: db_ref,
         itemBuilder: (context, snapshot, animation, index){
           if(snapshot.child("username").value.toString().startsWith(_query) || snapshot.child("email").value.toString().startsWith(_query)){

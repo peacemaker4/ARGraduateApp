@@ -19,55 +19,83 @@ import 'dart:io' as io;
 import '../values/app_colors.dart';
 
 class Gallery extends StatefulWidget {
+
+  String uid;
+
+  Gallery({super.key, required this.uid});
+  
+
   @override
-  _GalleryState createState() => _GalleryState();
+  _GalleryState createState() => _GalleryState(uid);
 }
 
 late List<ImageProvider> _imageProviders;
 
 class _GalleryState extends State<Gallery> {
+
+  String uid;
+
+  _GalleryState(this.uid){}
+
   late OverlayEntry _popupDialog;
  
   @override
   Widget build(BuildContext context) {
-    var ft = FirebaseDB().firebaseRTDB.ref('content/${Auth().currentUser?.uid}/').once();
+    var ft = FirebaseDB().firebaseRTDB.ref('content/').once();
 
     return FutureBuilder(
       future: ft, 
       builder: (context, snapshot){
         if(snapshot.hasData){
-          if(snapshot.data!.snapshot.children.isEmpty){
-            return Scaffold(
-              body: Center(
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("No images available", style: TextStyle(color: Colors.grey),), SizedBox(width: 3,) , Icon(Icons.image_not_supported, color: Colors.grey,)],) 
-              ),
-            );
-          }
+          var content = snapshot.data!.snapshot.children.where((x) => x.child("uid").value == uid).toList().reversed;
 
-          var content = snapshot.data?.snapshot.children.toList().reversed;
+          if(content.isNotEmpty){
+            _imageProviders = content!.map(_imageProviderGet).toList();
 
-          _imageProviders = content!.map(_imageProviderGet).toList();
-
-          if(content != null){
-            return Scaffold(
+            return RefreshIndicator(
+            onRefresh:() async {
+              setState(() {
+                
+              });
+            },
+            child:  Scaffold(
               body: GridView.count(
                 crossAxisCount: 3,
                 childAspectRatio: 1.0,
                 children: content!.map(_createGridTileWidget).toList(),
               ),
-            );
+            ));
           }
-          
+          else{
+            return RefreshIndicator(
+              onRefresh:() async {
+                setState(() {
+                  
+                });
+              },
+              child:  Scaffold(
+                body: Center(
+                  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("No images available", style: TextStyle(color: Colors.grey),), SizedBox(width: 3,) , Icon(Icons.image_not_supported, color: Colors.grey,)],) 
+                ),
+              ));
+          }
+                
         }
         List<String> emptyList = [''];
-        return Scaffold(
-              body: GridView.count(
-                crossAxisCount: 3,
-                childAspectRatio: 1.0,
-                children: emptyList!.map(_loadingGridTileWidget).toList(),
+        return RefreshIndicator(
+            onRefresh:() async {
+              setState(() {
+                
+              });
+            },
+            child:  Scaffold(
+              body: Center(
+                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("Loading images", style: TextStyle(color: Colors.grey),), SizedBox(width: 3,) , Icon(Icons.image_not_supported, color: Colors.grey,)],) 
               ),
-            );
-      });
+            ));
+
+                
+          });
   }
 
   ImageProvider _imageProviderGet(DataSnapshot data){

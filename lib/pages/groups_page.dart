@@ -9,6 +9,7 @@ import 'package:flutter_ar_app/models/Group.dart';
 import 'package:flutter_ar_app/pages/group_add_form.dart';
 import 'package:flutter_ar_app/pages/group_members_page.dart';
 import 'package:flutter_ar_app/values/app_colors.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:sign_in_button/sign_in_button.dart';
@@ -63,6 +64,13 @@ class _GroupsPageState extends State<GroupsPage> {
               )
             ),
             body: FirebaseAnimatedList(
+              defaultChild: 
+                Center(
+                  child: SpinKitRipple(
+                      color: AppColors.primaryColor,
+                      size: 50.0,
+                  )
+                ),
               query: db_ref,
               itemBuilder: (context, snapshot, animation, index){
                 if(snapshot.child("group_name").value.toString().startsWith(_query)){

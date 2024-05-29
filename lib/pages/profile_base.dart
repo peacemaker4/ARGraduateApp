@@ -26,81 +26,86 @@ class ProfileBasePage extends StatefulWidget {
 class _ProfileBasePageState extends State<ProfileBasePage> {
   @override
   Widget build(BuildContext context) {
-    return RefreshIndicator(
-      onRefresh:() async {
-        setState(() {
+    return Scaffold(
+      body: FutureBuilder(
+        future: FirebaseDB().firebaseRTDB.ref('users/${Auth().currentUser?.uid}').once(), 
+        builder: (context, snapshot){
+          if(snapshot.hasData){
+            var data = snapshot.data?.snapshot.value as Map;
           
-        });
-      },
-      child: Scaffold(
-      // backgroundColor: Color.fromARGB(255, 244, 242, 244),
-      body: DefaultTabController(
-        length: 2,
-        child: NestedScrollView(
-          headerSliverBuilder: (context, _) {
-            return [
-              SliverList(
-                delegate: SliverChildListDelegate(
-                  [
-                    profileHeader(),
-                  ],
-                ),
-              ),
-            ];
-          },
-          body: Column(
-            children: <Widget>[
-              Material(
-                color: Colors.white,
-                child: TabBar(
-                  labelColor: AppColors.primaryColor,
-                  unselectedLabelColor: Colors.grey[400],
-                  indicatorWeight: 3,
-                  indicatorPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  indicatorColor: AppColors.primaryColor,
-                  tabs: [
-                    Tab(
-                      icon: Wrap(
-                        crossAxisAlignment: WrapCrossAlignment.center,
-                        children: [
-                        // SizedBox(width: 5,),
-                        // Text("Memories"),
-                        // SizedBox(width: 5,),
-                        Icon(
-                          Icons.grid_on,
-                          color: AppColors.primaryColor,
-                        ),
-                      ],) ,
-                    ),
-                    Tab(
-                      icon: Icon(
-                        Icons.video_camera_back,
-                        color: AppColors.primaryColor,
+            return DefaultTabController(
+              length: 2,
+              child: NestedScrollView(
+                headerSliverBuilder: (context, _) {
+                  return [
+                    SliverList(
+                      delegate: SliverChildListDelegate(
+                        [
+                          profileHeader(snapshot),
+                        ],
                       ),
                     ),
-                    // Tab(
-                    //   icon: Icon(
-                    //     Icons.file_present_sharp,
-                    //     color: AppColors.primaryColor,
-                    //   ),
-                    // ),
+                  ];
+                },
+                body: Column(
+                  children: <Widget>[
+                    Material(
+                      color: Colors.white,
+                      child: TabBar(
+                        labelColor: AppColors.primaryColor,
+                        unselectedLabelColor: Colors.grey[400],
+                        indicatorWeight: 3,
+                        indicatorPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        indicatorColor: AppColors.primaryColor,
+                        tabs: [
+                          Tab(
+                            icon: Wrap(
+                              crossAxisAlignment: WrapCrossAlignment.center,
+                              children: [
+                              // SizedBox(width: 5,),
+                              // Text("Memories"),
+                              // SizedBox(width: 5,),
+                              Icon(
+                                Icons.grid_on,
+                                color: AppColors.primaryColor,
+                              ),
+                            ],) ,
+                          ),
+                          Tab(
+                            icon: Icon(
+                              Icons.video_camera_back,
+                              color: AppColors.primaryColor,
+                            ),
+                          ),
+                          // Tab(
+                          //   icon: Icon(
+                          //     Icons.file_present_sharp,
+                          //     color: AppColors.primaryColor,
+                          //   ),
+                          // ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: TabBarView(
+                        children: [
+                          Gallery(uid: data["uid"]),
+                          Videos(uid: data["uid"]),
+                          //ModelsList(),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    Gallery(),
-                    Videos(),
-                    //ModelsList(),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    ));
+            );
+          }
+          return SizedBox.shrink();
+
+          
+        }
+      )
+    );
   }
 
   Widget _header(){
@@ -110,181 +115,176 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
     );
   }
   
-  Widget profileHeader() {
-    return FutureBuilder(
-      future: FirebaseDB().firebaseRTDB.ref('users/${Auth().currentUser?.uid}').once(), 
-      builder: (context, snapshot){
-        if(snapshot.hasData){
-          var data = snapshot.data!.snapshot.value as Map;
-          // var user = DBUser.fromJson(jsonDecode(data.toString()));
-          var img_url = data['img_url'];
-          
-          var group_name = "";
+  Widget profileHeader(var snapshot) {
+    if(snapshot.hasData){
+      var data = snapshot.data!.snapshot.value as Map;
+      // var user = DBUser.fromJson(jsonDecode(data.toString()));
+      var img_url = data['img_url'];
+      
+      var group_name = "";
 
-          return Container(
-            width: double.infinity,
-            decoration: BoxDecoration(color: Colors.white),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 18.0, right: 18.0, bottom: 10),
-              child: Column(
+      return Container(
+        width: double.infinity,
+        decoration: BoxDecoration(color: Colors.white),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 18.0, right: 18.0, bottom: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 25,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    height: 25,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      img_url != ""
-                      ?
+                  img_url != ""
+                  ?
+                    CircleAvatar(
+                      radius: 48,
+                      backgroundColor: Colors.grey.shade300,
+                      backgroundImage:
+                        NetworkImage(img_url),
+                    )
+                  :
+                    CircleAvatar(
+                      radius: 48,
+                      backgroundColor: Colors.grey.shade300,
+                      backgroundImage: 
+                        AssetImage('assets/images/default_avatar.png'),
+                    )
+                  ,
+                  
+                ],
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Text(
+                '${data['username']}',
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  letterSpacing: 0.4,
+                ),
+              ),
+              SizedBox(
+                height: 4,
+              ),
+              // Text(
+              //   '${user?.email}',
+              //   style: TextStyle(
+              //     letterSpacing: 0.4,
+              //   ),
+              // ),
+              // SizedBox(
+              //   height: 4,
+              // ),
+              data["group"] != "" ? 
+              _groupName(data["group"])
+                : Text(
+                '${user?.email}',
+                style: TextStyle(
+                  letterSpacing: 0.4,
+                ),
+              )
+              ,
+              SizedBox(
+                height: 12,
+              ),
+
+              Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          _editProfileButton(data),
+          _adminPanelButton(data['role']),
+        ],
+        ),
+              
+            ],
+          ),
+        ),
+      );
+    }
+    else{
+        return Container(
+        width: double.infinity,
+        decoration: BoxDecoration(color: Colors.white),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 18.0, right: 18.0, bottom: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 25,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Shimmer.fromColors(
+                    baseColor: Colors.grey.shade300,
+                    highlightColor: Colors.grey.shade100,
+                    child:
                         CircleAvatar(
                           radius: 48,
-                          backgroundColor: Colors.grey.shade300,
-                          backgroundImage:
-                            NetworkImage(img_url),
-                        )
-                      :
-                        CircleAvatar(
-                          radius: 48,
-                          backgroundColor: Colors.grey.shade300,
+                          backgroundColor: Color(0xff74EDED),
                           backgroundImage: 
                             AssetImage('assets/images/default_avatar.png'),
                         )
-                      ,
-                      
-                    ],
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  Text(
-                    '${data['username']}',
-                    style: TextStyle(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                      letterSpacing: 0.4,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  // Text(
-                  //   '${user?.email}',
-                  //   style: TextStyle(
-                  //     letterSpacing: 0.4,
-                  //   ),
-                  // ),
-                  // SizedBox(
-                  //   height: 4,
-                  // ),
-                  data["group"] != "" ? 
-                  _groupName(data["group"])
-                   : Text(
-                    '${user?.email}',
-                    style: TextStyle(
-                      letterSpacing: 0.4,
-                    ),
                   )
                   ,
-                  SizedBox(
-                    height: 12,
-                  ),
-
-                  Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              _editProfileButton(data),
-              _adminPanelButton(data['role']),
-            ],
-            ),
-                  
                 ],
               ),
-            ),
-          );
-        }
-        else{
-            return Container(
-            width: double.infinity,
-            decoration: BoxDecoration(color: Colors.white),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 18.0, right: 18.0, bottom: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 25,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Shimmer.fromColors(
-                        baseColor: Colors.grey.shade300,
-                        highlightColor: Colors.grey.shade100,
-                        child:
-                            CircleAvatar(
-                              radius: 48,
-                              backgroundColor: Color(0xff74EDED),
-                              backgroundImage: 
-                                AssetImage('assets/images/default_avatar.png'),
-                            )
-                      )
-                      ,
-                    ],
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  Shimmer.fromColors(
-                    baseColor: Colors.grey.shade300,
-                    highlightColor: Colors.grey.shade100,
-                    child:
-                    Text(
-                      'Username',
-                      style: TextStyle(
-                        color: Colors.black87,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                        letterSpacing: 0.4,
-                      ),
-                    )
-                  ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  Shimmer.fromColors(
-                    baseColor: Colors.grey.shade300,
-                    highlightColor: Colors.grey.shade100,
-                    child:
-                    Text(
-                      'Email',
-                      style: TextStyle(
-                        letterSpacing: 0.4,
-                      ),
-                    )
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              _loadingButton(),
-            ],
-            ),
-                  
-                ],
+              SizedBox(
+                height: 8,
               ),
-            ),
-          );
-        }
-      }
-    );
+              Shimmer.fromColors(
+                baseColor: Colors.grey.shade300,
+                highlightColor: Colors.grey.shade100,
+                child:
+                Text(
+                  'Username',
+                  style: TextStyle(
+                    color: Colors.black87,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    letterSpacing: 0.4,
+                  ),
+                )
+              ),
+              SizedBox(
+                height: 4,
+              ),
+              Shimmer.fromColors(
+                baseColor: Colors.grey.shade300,
+                highlightColor: Colors.grey.shade100,
+                child:
+                Text(
+                  'Email',
+                  style: TextStyle(
+                    letterSpacing: 0.4,
+                  ),
+                )
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          _loadingButton(),
+        ],
+        ),
+              
+            ],
+          ),
+        ),
+      );
+    }
   }
 
   Widget _groupName(var group_id){
@@ -328,7 +328,34 @@ class _ProfileBasePageState extends State<ProfileBasePage> {
                   ),
           ],) ;
         }
-        return SizedBox.shrink();
+        return Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            FilterChip(
+                    backgroundColor: AppColors.primaryColor,
+                    label: Text('Info', 
+                    style: TextStyle(
+                      color: Colors.white,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.bold
+                    )),
+                    onSelected: (value) {
+                      
+                    },
+                  ),
+                  SizedBox(width: 5,),
+                  FilterChip(
+                    backgroundColor: AppColors.primaryColor,
+                    label: Text('Group', 
+                    style: TextStyle(
+                      color: Colors.white,
+                      letterSpacing: 0.4,
+                      fontWeight: FontWeight.bold
+                    )),
+                    onSelected: (value) {
+                      
+                    },
+                  ),
+          ],) ;
       }
     );
 
