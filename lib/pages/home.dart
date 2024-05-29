@@ -32,34 +32,6 @@ class _HomePageState extends State<HomePage> {
   TextEditingController searchTextController = TextEditingController();
 
 
-
-  Widget _bouncingButton(){
-    return BouncingButton(
-      upperBound: 0.1,
-      duration: Duration(milliseconds: 100),
-      child: Container(
-        height: 45,
-        width: 270,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100.0),
-          color: Color.fromARGB(255, 57, 123, 255),
-        ),
-        child: const Center(
-          child: Text(
-            'Welcome home',
-            style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-        )),
-        onPressed: () {
-          
-        }
-    );
-  }
-
   Widget _header(var group_id){
     if(group_id != ""){
       return FutureBuilder(
@@ -67,13 +39,31 @@ class _HomePageState extends State<HomePage> {
         builder: (context, snapshot){
           if(snapshot.hasData){
             var data = snapshot.data!.snapshot.value as Map;
-            return Row(mainAxisAlignment: MainAxisAlignment.center,
+            return Container(child: 
+            Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(5, 20, 0, 20), 
-                child: Text("${data["group_name"]} ${data["institution"]}", style: TextStyle(fontFamily: "Montserrat", fontSize: 28, fontWeight: FontWeight.w500, color: AppColors.primaryColor),),
+                padding: EdgeInsets.fromLTRB(5, 15, 0, 15), 
+                child: 
+                  Container(
+                    child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: SizedBox(
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                              color: Colors.white
+                            ),
+                            child:
+                              Padding(padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                              child: Text("${data["group_name"]} ${data["institution"]}", style: TextStyle(fontFamily: "Montserrat", fontSize: 22, fontWeight: FontWeight.w500, color: AppColors.primaryColor),),)
+                             
+                          ),
+                        ),
+                      ),)
               )
-            ],) ;
+            ],) ,
+            decoration: BoxDecoration(color: Color.fromARGB(255, 244, 242, 244),),
+            ) ;
           }
           return _header_default();
         }
@@ -360,13 +350,28 @@ class _HomePageState extends State<HomePage> {
           child: Shimmer.fromColors(
             baseColor: Colors.grey.shade300,
             highlightColor: Colors.grey.shade100,
-            child: SizedBox(
-              child: const DecoratedBox(
-                decoration: const BoxDecoration(
-                  color: Colors.black
+            child: Padding(padding: EdgeInsets.fromLTRB(5, 5, 5, 5), 
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  fit: StackFit.expand,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                      },
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: SizedBox(
+                          child: const DecoratedBox(
+                            decoration: const BoxDecoration(
+                              color: Colors.black
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ]
                 ),
               ),
-            ),
           ),
         );
         }
@@ -413,6 +418,7 @@ class _HomePageState extends State<HomePage> {
               Material(
                 color: Colors.white,
                 child: TabBar(
+                  padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
                   labelColor: AppColors.primaryColor,
                   unselectedLabelColor: Color.fromARGB(187, 57, 123, 255),
                   indicatorWeight: 2,

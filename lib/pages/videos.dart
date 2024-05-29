@@ -39,7 +39,7 @@ class _VideosState extends State<Videos> {
       future: ft, 
       builder: (context, snapshot){
         if(snapshot.hasData){
-          var content = snapshot.data!.snapshot.children.where((x) => x.child("uid").value == uid).toList().reversed;
+          var content = snapshot.data!.snapshot.children.where((x) => x.child("uid").value == uid && x.child("type").value == "video").toList().reversed;
 
           if(content.isNotEmpty){
             return RefreshIndicator(

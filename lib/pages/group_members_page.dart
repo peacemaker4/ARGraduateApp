@@ -123,6 +123,7 @@ class _GroupMembersPageState extends State<GroupMembersPage> {
       context: context,
       builder: (BuildContext context) => CupertinoAlertDialog(
         title: Text("Group member", style: TextStyle(fontSize: 16),),
+        content: Text("${snapshot.child("username").value}"),
         actions: <Widget>[
           CupertinoActionSheetAction(
             onPressed: () async {
