@@ -53,12 +53,6 @@ public class LoadCustomContent : MonoBehaviour
     public void LoadContent(string content)
     {
         var data = JsonUtility.FromJson<ARContentCollection>(content);
-
-        //print(data.ToString());
-
-        //var msg_manager = GameObject.FindWithTag("UnityMessageManager");
-        //msg_manager.GetComponent<FlutterCommunication>().MessageToFlutter(content.ToString());
-
         StartCoroutine(PopulateImageLibrary(data.content));
     }
 
@@ -71,13 +65,9 @@ public class LoadCustomContent : MonoBehaviour
             yield return GetTexture(c, count);
             count++;
         }
-
         if (myRuntimeReferenceImageLibrary != null)
         {
             mARTrackedImageManager.referenceLibrary = myRuntimeReferenceImageLibrary;
-
-            var msg_manager = GameObject.FindWithTag("UnityMessageManager");
-            msg_manager.GetComponent<FlutterCommunication>().MessageToFlutter("Loaded: " + mARTrackedImageManager.referenceLibrary.count.ToString());
         }
     }
 
@@ -87,25 +77,18 @@ public class LoadCustomContent : MonoBehaviour
         yield return www.SendWebRequest();
         AddReferenceImageJobState job;
 
-        if (www.result != UnityWebRequest.Result.Success)
-        {
-            Debug.Log(www.error);
-        }
-        else
+        if (www.result == UnityWebRequest.Result.Success)
         {
             Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-
             if (myTexture.isReadable)
             {
                 var name = "img" + count.ToString();
                 job = myRuntimeReferenceImageLibrary.ScheduleAddImageWithValidationJob(myTexture, name, 0.1f);
-
                 GameObject obj = null;
 
                 if(media.type == "3Dmodel")
                 {
                     obj = Instantiate(modelPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-                    //obj = PrefabUtility.InstantiatePrefab(modelPrefab) as GameObject;
                     obj.name = name;
                     obj.GetComponent<LoadModelFromURL>().model_url = media.file_url;
                     obj.GetComponent<LoadModelFromURL>().texture_url = media.texture_url;
@@ -115,18 +98,12 @@ public class LoadCustomContent : MonoBehaviour
                 if (media.type == "video")
                 {
                     obj = Instantiate(videoPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-                    
-                    //obj = PrefabUtility.InstantiatePrefab(videoPrefab) as GameObject;
                     obj.name = name;
                     obj.GetComponent<SetVideoURL>().url = media.file_url;
                     obj.GetComponent<SetVideoURL>().mat_texture = myTexture;
                     xrOrigin.GetComponent<PlaceTrackedImages>().ArPrefabs.Add(obj);
                     obj.SetActive(false);
                 }
-
-                //var clone = PrefabUtility.InstantiatePrefab(Selection.activeObject as GameObject) as GameObject;
-
-                //GetComponent<PlaceTrackedImages>().ArPrefabs[count] = 
 
                 yield return new WaitUntil(() => job.jobHandle.IsCompleted);
             }

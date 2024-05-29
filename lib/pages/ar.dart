@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ar_app/models/ARContent.dart';
 import 'package:flutter_ar_app/pages/exit.dart';
@@ -25,7 +26,7 @@ class _ARPageState extends State<ARPage> {
 
   @override
   Widget build(BuildContext context) {
-    
+    sendAvailableContext();
     return Scaffold(
       key: _scaffoldKey,
       body: Card(
@@ -54,42 +55,60 @@ class _ARPageState extends State<ARPage> {
   void sendAvailableContext() {
     var content = null;
     
-    var ft = FirebaseDB().firebaseRTDB.ref('content/${Auth().currentUser?.uid}/').once();
+    var ft = FirebaseDB().firebaseRTDB.ref('users/${Auth().currentUser?.uid}/').once();
+
+    var ft2 = FirebaseDB().firebaseRTDB.ref('content/').once();
+
+    var ft3 = FirebaseDB().firebaseRTDB.ref('users/').once();
+
+
+    // FirebaseDB().firebaseRTDB.ref('content/').once().then((value){
+    //   var data = value.snapshot.value as Map;
+
+    //   // var json = jsonEncode(data.values.toList());
+
+    //   Fluttertoast.showToast(
+    //     msg: '${value.snapshot.value}',
+    //     toastLength: Toast.LENGTH_SHORT,
+    //     gravity: ToastGravity.BOTTOM,
+    //     timeInSecForIosWeb: 1,
+    //     backgroundColor: Colors.purple,
+    //     textColor: Colors.white,
+    //     fontSize: 16.0
+    //   );
+
+
+    // });
+
+
 
     ft.then((value){
-      var curr_count = value.snapshot.children.length;
+      var group = value.snapshot.child("group").value;
+      FirebaseDB().firebaseRTDB.ref('users/').once().then((users){
+        FirebaseDB().firebaseRTDB.ref('content/').once().then((content){
+          var list_content =  List<Object>.empty(growable: true);
+          for(var i in content.snapshot.children){
+            var match = users.snapshot.children.where((x) => x.child("group").value == group && x.child("uid").value == i.child("uid").value.toString());
+            if(match.length > 0){
+              list_content.add(i.value!);
+            }
+          }
+          
+          var json = jsonEncode(list_content.toList());
 
-      // var list = value.snapshot.children.toList();
+          var input = "{\"content\": ${json}}";
 
-      // List<Map<String, dynamic>> mappedList = list.map((obj) {
-      //   return {
-      //     'uid': obj.uid,
-      //     'type': obj.type,
-      //     'img_url': obj.image_url,
-      //     'file_url': obj.file_url,
-      //     'img_name': obj.image_name,
-      //     'file_name': obj.file_name,
-      //     'texture_url': obj.texture_url,
-      //   };
-      // }).toList();
+          _unityWidgetController?.postMessage(
+            "LoadCustomContent",
+            "LoadContent",
+            input
+          );
 
-      // var data = list.map((e) => jsonEncode(e));
-
-      var data = value.snapshot.value as Map;
-
-      var json = jsonEncode(data.values.toList());
-
-      var input = "{\"content\": ${json}}";
-
-      _unityWidgetController?.postMessage(
-        "LoadCustomContent",
-        "LoadContent",
-        input
-      );
-
+        });
+      });
     });
 
-    
+
   }
 
   // Callback that connects the created controller to the unity controller
@@ -100,7 +119,7 @@ class _ARPageState extends State<ARPage> {
 
   void onUnityMessage(message) {
     if(message.toString() == "Started"){
-      sendAvailableContext();
+      // sendAvailableContext();
     }
     else{
       Fluttertoast.showToast(
