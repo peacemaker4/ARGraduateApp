@@ -8,6 +8,7 @@ import 'package:flutter_ar_app/auth.dart';
 import 'package:flutter_ar_app/firebasedb.dart';
 import 'package:flutter_ar_app/models/DBUser.dart';
 import 'package:flutter_ar_app/pages/ar_content_add_form.dart';
+import 'package:flutter_ar_app/pages/content_page.dart';
 import 'package:flutter_ar_app/pages/groups_page.dart';
 import 'package:flutter_ar_app/pages/profile_edit.dart';
 import 'package:flutter_ar_app/pages/role_request_modal.dart';
@@ -239,7 +240,14 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
           var count = snapshot.data!.snapshot.children.length;
           var dt_now = DateTime.now();
 
-          return InkWell(child: Container(
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ContentPage()),
+              );
+            },
+            child: Container(
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.deepOrange,
@@ -341,8 +349,6 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
             _groupsInfo(),
             SizedBox(height: 15,),
             _contentInfo(),
-            SizedBox(height: 15,),
-            _addARContentButton(),
           ],
         ),
       )), 
@@ -369,23 +375,24 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
             Text(
-              "Add user photo",
+              "Add user content",
               style: TextStyle(
-                color: Colors.white,
+                color: AppColors.primaryColor,
               )
             ),
             Icon(
-              Icons.image,
-              size: 15,
-              color: Colors.white,
+              Icons.add_photo_alternate,
+              size: 20,
+              color: AppColors.primaryColor,
             ),
           ],
         )
       ),
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.orange),
+        backgroundColor: MaterialStatePropertyAll(Colors.white),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
+            side: BorderSide(color: AppColors.primaryColor, width: 1.0),
             borderRadius: BorderRadius.circular(20.0),  
           ),
         ),

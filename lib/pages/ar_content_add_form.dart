@@ -75,25 +75,30 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
         backgroundColor: Colors.white,
         foregroundColor: Color.fromARGB(255, 57, 123, 255),
         shadowColor: Color.fromARGB(84, 0, 0, 0),
-        // title: const Text('Admin', style: TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w500)), 
+        title: const Text('Add Content', style: TextStyle(fontWeight: FontWeight.w500)), 
         ),
         backgroundColor: Color.fromARGB(255, 244, 242, 244),
         body: Padding(
         padding: EdgeInsets.all(12),
         child: ListView(
           children: [
-            _header(),
+            SizedBox(height: 5,),
             _selectUserButton(),
             _selectedUser(),
+            SizedBox(height: 5,),
             _selectImageButton(),
-            _selectedImage(),
+             _selectedImage(),
             _selectedImagePreview(),
+            SizedBox(height: 5,),
             _selectContentType(),
+            SizedBox(height: 5,),
             switchValue ? _select3DModelButton() : _selectVideoButton(),
             switchValue ? _selected3DModel() : _selectedVideo(),
+            SizedBox(height: 5,),
             switchValue ? _selectImageTextureButton() : SizedBox.shrink(),
             switchValue ? _selectedImageTexture() : SizedBox.shrink(),
             switchValue ? _selectedImageTexturePreview() : SizedBox.shrink(),
+            SizedBox(height: 5,),
             _submitButton(),
           ],
         ),
@@ -140,18 +145,40 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
               });
             }
           });
-        }, 
-        child: Text("Select user"),
+        },
+        child: Padding(
+          padding: EdgeInsets.all(15), 
+          child: Wrap(
+            spacing: 12,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              Text(
+                "Select user",
+                style: TextStyle(
+                  color: AppColors.primaryColor,
+                )
+              ),
+              Icon(
+                Icons.person_search_rounded,
+                size: 16,
+                color: AppColors.primaryColor,
+              ),
+            ],
+          )
+        ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+          backgroundColor: MaterialStateProperty.all(Colors.white),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),  
+              side: BorderSide(color: AppColors.primaryColor, width: 0.75),
+              borderRadius: BorderRadius.circular(10.0),  
             ),
           ),
         ),
       );
   }
+
+  
 
   Widget _selectedUser(){
     if(_curr_user != null){
@@ -197,17 +224,38 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
     }
   }
   
+
   Widget _selectImageButton(){
       return ElevatedButton(
         onPressed: () {
           selectImage();
-        }, 
-        child: Text("Select image"),
+        },
+        child: Padding(
+          padding: EdgeInsets.all(15), 
+          child: Wrap(
+            spacing: 12,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              Text(
+                "Select image",
+                style: TextStyle(
+                  color: AppColors.primaryColor,
+                )
+              ),
+              Icon(
+                Icons.image_search_rounded,
+                size: 16,
+                color: AppColors.primaryColor,
+              ),
+            ],
+          )
+        ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+          backgroundColor: MaterialStateProperty.all(Colors.white),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),  
+              side: BorderSide(color: AppColors.primaryColor, width: 0.75),
+              borderRadius: BorderRadius.circular(10.0),  
             ),
           ),
         ),
@@ -271,13 +319,33 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
       return ElevatedButton(
         onPressed: () {
           selectVideo();
-        }, 
-        child: Text("Select video"),
+        },
+        child: Padding(
+          padding: EdgeInsets.all(15), 
+          child: Wrap(
+            spacing: 12,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              Text(
+                "Select video",
+                style: TextStyle(
+                  color: AppColors.primaryColor,
+                )
+              ),
+              Icon(
+                Icons.video_file_rounded,
+                size: 16,
+                color: AppColors.primaryColor,
+              ),
+            ],
+          )
+        ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+          backgroundColor: MaterialStateProperty.all(Colors.white),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),  
+              side: BorderSide(color: AppColors.primaryColor, width: 0.75),
+              borderRadius: BorderRadius.circular(10.0),  
             ),
           ),
         ),
@@ -317,15 +385,34 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
   Widget _select3DModelButton(){
       return ElevatedButton(
         onPressed: () {
-          //selectVideo();
           select3DModel();
-        }, 
-        child: Text("Select 3D Model"),
+        },
+        child: Padding(
+          padding: EdgeInsets.all(15), 
+          child: Wrap(
+            spacing: 12,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              Text(
+                "Select 3D Model",
+                style: TextStyle(
+                  color: AppColors.primaryColor,
+                )
+              ),
+              Icon(
+                Icons.attachment,
+                size: 16,
+                color: AppColors.primaryColor,
+              ),
+            ],
+          )
+        ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+          backgroundColor: MaterialStateProperty.all(Colors.white),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),  
+              side: BorderSide(color: AppColors.primaryColor, width: 0.75),
+              borderRadius: BorderRadius.circular(10.0),  
             ),
           ),
         ),
@@ -399,13 +486,33 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
       return ElevatedButton(
         onPressed: () {
           selectImageTexture();
-        }, 
-        child: Text("Select texture"),
+        },
+        child: Padding(
+          padding: EdgeInsets.all(15), 
+          child: Wrap(
+            spacing: 12,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              Text(
+                "Select texture",
+                style: TextStyle(
+                  color: AppColors.primaryColor,
+                )
+              ),
+              Icon(
+                Icons.image_search_rounded,
+                size: 16,
+                color: AppColors.primaryColor,
+              ),
+            ],
+          )
+        ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+          backgroundColor: MaterialStateProperty.all(Colors.white),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),  
+              side: BorderSide(color: AppColors.primaryColor, width: 0.75),
+              borderRadius: BorderRadius.circular(10.0),  
             ),
           ),
         ),
@@ -474,7 +581,7 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
           )
         ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.orange),
+          backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),  
@@ -492,7 +599,7 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
   void _submitForm() async{
     SmartDialog.showLoading();
 
-    _firebaseRTDB.ref('content/${_curr_user?.uid}').once().then((value) async {
+    _firebaseRTDB.ref('content/').once().then((value) async {
       var curr_count = value.snapshot.children.length;
 
       String imageUrl = await _fbStorage.uploadFileToStorage('users/ar/image/${curr_count}', _image!, _image_extension!);
@@ -511,7 +618,7 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
         fileName = "$curr_count.$_video_extension";
       }
 
-      DatabaseReference ref = _firebaseRTDB.ref("content/${_curr_user?.uid}/");
+      DatabaseReference ref = _firebaseRTDB.ref("content/");
       await ref.push().set({
         "uid": _curr_user?.uid,
         "type": switchValue ? "3Dmodel" : "video",

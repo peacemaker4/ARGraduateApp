@@ -8,6 +8,7 @@ import 'package:flutter_ar_app/models/DBUser.dart';
 import 'package:flutter_ar_app/pages/group_add_form.dart';
 import 'package:flutter_ar_app/pages/select_user_modal.dart';
 import 'package:flutter_ar_app/values/app_colors.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:sign_in_button/sign_in_button.dart';
@@ -83,6 +84,13 @@ class _GroupMembersPageState extends State<GroupMembersPage> {
               )
             ),
             body: FirebaseAnimatedList(
+              defaultChild: 
+                Center(
+                  child: SpinKitRipple(
+                      color: AppColors.primaryColor,
+                      size: 50.0,
+                  )
+                ),
               query: db_ref,
               itemBuilder: (context, snapshot, animation, index){
                 if(snapshot.child("group").value.toString() == group.id){
@@ -98,7 +106,7 @@ class _GroupMembersPageState extends State<GroupMembersPage> {
                       title: Text(snapshot.child("username").value.toString()),
                       subtitle: Text(snapshot.child("email").value.toString()),
                       onTap: () {
-                        
+                        _groupMemberActionSheet(snapshot);
                       },
                     ),
                   );
@@ -109,6 +117,51 @@ class _GroupMembersPageState extends State<GroupMembersPage> {
           ));
         }
     
+
+  void _groupMemberActionSheet(var snapshot) {
+    showCupertinoModalPopup<void>(
+      context: context,
+      builder: (BuildContext context) => CupertinoAlertDialog(
+        title: Text("Group member", style: TextStyle(fontSize: 16),),
+        actions: <Widget>[
+          CupertinoActionSheetAction(
+            onPressed: () async {
+              DatabaseReference ref = FirebaseDB().firebaseRTDB.ref("users/${snapshot.child("uid").value}");
+              await ref.set({
+                "uid": snapshot.child("uid").value,
+                "email": snapshot.child("email").value,
+                "username": snapshot.child("username").value,
+                "role":  snapshot.child("role").value,
+                "group": "",
+                "img_url": snapshot.child("img_url").value,
+              });
+              setState(() {});
+
+              Navigator.pop(context);
+            },
+            child: 
+              Wrap(
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  Text(
+                    'Remove from current group',
+                    style: TextStyle(color: Colors.red, fontSize: 16)
+                  ),
+                  
+                ],
+              )
+          ),
+          CupertinoActionSheetAction(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('Cancel', style: TextStyle(fontSize: 16, color: Colors.grey)),
+          )
+        ],
+        
+      ),
+    );
+  }
 
   // Widget _search(){
   //   return Padding(
