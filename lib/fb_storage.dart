@@ -17,6 +17,10 @@ class FBStorage{
     String downloadUrl = await snapshot.ref.getDownloadURL();
 
     return downloadUrl;
-
   }
+
+  void deleteFileFromStorage(String url){
+    storage.refFromURL(url).delete();
+  }
+
 }

@@ -17,6 +17,7 @@ import 'package:sign_in_button/sign_in_button.dart';
 import '../auth.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../fb_storage.dart';
 import 'ar_content_add_form.dart';
 
 class ContentPage extends StatefulWidget {
@@ -86,11 +87,11 @@ class _ContentPageState extends State<ContentPage> {
                           )
                       ],
                     ),
-                    title: Text("${snapshot.child("type").value.toString().capitalizeFirst} №${snapshot.child("img_name").value.toString().split(".")[0]}"),
+                    title: Text("${snapshot.child("type").value == "video" ? "Video" : "3D Model"} №${snapshot.child("img_name").value.toString().split(".")[0]}"),
                     subtitle: Text("User: ${snapshotf.hasData ? snapshotf.data!.snapshot.children.firstWhere((x) => x.child("uid").value == snapshot.child("uid").value).child("username").value: ""}"),
                     // subtitle: Text(snapshot.child("email").value.toString()),
                     onTap: () {
-                      
+                      _contentActionSheet(snapshot);
                     },
                   ),
                 );
@@ -102,6 +103,50 @@ class _ContentPageState extends State<ContentPage> {
         }
     );
     
+  }
+
+  final _fbStorage = FBStorage();
+
+  void _contentActionSheet(DataSnapshot snapshot) {
+    showCupertinoModalPopup<void>(
+      context: context,
+      builder: (BuildContext context) => CupertinoAlertDialog(
+        title: Text("Content", style: TextStyle(fontSize: 16),),
+        content: Text("${snapshot.child("type").value == "video" ? "Video" : "3D Model"} №${snapshot.child("img_name").value.toString().split(".")[0]}"),
+        actions: <Widget>[
+          CupertinoActionSheetAction(
+            onPressed: () async {
+              FirebaseDB().firebaseRTDB.ref("content/${snapshot.key}").remove().then((value){
+                _fbStorage.deleteFileFromStorage(snapshot.child("img_url").value.toString());
+                _fbStorage.deleteFileFromStorage(snapshot.child("file_url").value.toString());
+                if(snapshot.child("texture_url").value != "")
+                  _fbStorage.deleteFileFromStorage(snapshot.child("texture_url").value.toString());
+
+                Navigator.pop(context);
+              });
+            },
+            child: 
+              Wrap(
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: [
+                  Padding(padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  child: Text(
+                    'Remove this content',
+                    style: TextStyle(color: Colors.red, fontSize: 16)
+                  ),)
+                ],
+              )
+          ),
+          CupertinoActionSheetAction(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('Cancel', style: TextStyle(fontSize: 16, color: Colors.grey)),
+          )
+        ],
+        
+      ),
+    );
   }
 
   Widget _search(){

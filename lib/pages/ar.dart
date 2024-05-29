@@ -127,10 +127,15 @@ class _ARPageState extends State<ARPage> {
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.BOTTOM,
         timeInSecForIosWeb: 1,
-        backgroundColor: Colors.purple,
+        backgroundColor: Color.fromARGB(255, 16, 16, 16),
         textColor: Colors.white,
         fontSize: 16.0
       );
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   SnackBar(
+      //     content: Text('${message.toString()}')
+      //   )
+      // );
     }
     
   }

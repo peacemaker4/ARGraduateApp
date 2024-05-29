@@ -68,6 +68,9 @@ public class LoadCustomContent : MonoBehaviour
         if (myRuntimeReferenceImageLibrary != null)
         {
             mARTrackedImageManager.referenceLibrary = myRuntimeReferenceImageLibrary;
+
+            var msg_manager = GameObject.FindWithTag("UnityMessageManager");
+            msg_manager.GetComponent<FlutterCommunication>().MessageToFlutter("Loaded"); // + mARTrackedImageManager.referenceLibrary.count.ToString());
         }
     }
 

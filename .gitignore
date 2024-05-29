@@ -32,6 +32,7 @@ migrate_working_dir/
 .pub/
 /build/
 *.so
+.fvm/flutter_sdk
 
 # Symbolication related
 app.*.symbols
@@ -47,3 +48,4 @@ app.*.map.json
 /unity/AR/Library
 /unity/AR/Builds
 /unity/AR/UserSettings
+/unity/AR/Temp
