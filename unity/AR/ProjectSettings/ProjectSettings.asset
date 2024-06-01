@@ -187,7 +187,7 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 4054
-  iPhoneSdkVersion: 988
+  iPhoneSdkVersion: 989
   iOSTargetOSVersionString: 12.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
@@ -808,6 +808,7 @@ PlayerSettings:
     Android: 0
   il2cppCodeGeneration:
     Android: 1
+    iPhone: 1
   managedStrippingLevel:
     Android: 1
     EmbeddedLinux: 1
@@ -921,4 +922,4 @@ PlayerSettings:
   hmiLoadingImage: {fileID: 0}
   platformRequiresReadableAssets: 0
   virtualTexturingSupportEnabled: 0
-  insecureHttpOption: 0
+  insecureHttpOption: 2
