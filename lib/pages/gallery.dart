@@ -42,7 +42,6 @@ class _GalleryState extends State<Gallery> {
   @override
   Widget build(BuildContext context) {
     var ft = FirebaseDB().firebaseRTDB.ref('content/').once();
-
     return FutureBuilder(
       future: ft, 
       builder: (context, snapshot){

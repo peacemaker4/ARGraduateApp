@@ -5264,7 +5264,6 @@ struct SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89  : public MonoBehav
 {
 	VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___videoPlayer;
 	String_t* ___url;
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___image_material;
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___mat_texture;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___quad;
 };
@@ -6254,9 +6253,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9166[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9167[3] = 
 {
 	static_cast<int32_t>(offsetof(PlaceTrackedImages_t9A1BE3CE9F556643A2223A2754D3258B4D288A61, ____trackedImagesManager)),static_cast<int32_t>(offsetof(PlaceTrackedImages_t9A1BE3CE9F556643A2223A2754D3258B4D288A61, ___ArPrefabs)),static_cast<int32_t>(offsetof(PlaceTrackedImages_t9A1BE3CE9F556643A2223A2754D3258B4D288A61, ____instantiatedPrefabs)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9168[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9168[4] = 
 {
-	static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___videoPlayer)),static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___url)),static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___image_material)),static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___mat_texture)),static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___quad)),};
+	static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___videoPlayer)),static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___url)),static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___mat_texture)),static_cast<int32_t>(offsetof(SetVideoURL_t70AEFA662295A17F1A38BC60B502F2ECC737CE89, ___quad)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9169[2] = 
 {
 	static_cast<int32_t>(offsetof(SceneTemplate_RotateCube_tB6D99CC88F0E89517A2E6E071F0334FE69FB44CC, ___rotateSpeed)),static_cast<int32_t>(offsetof(SceneTemplate_RotateCube_tB6D99CC88F0E89517A2E6E071F0334FE69FB44CC, ___objectRotation)),};

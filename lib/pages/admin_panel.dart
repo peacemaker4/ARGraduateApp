@@ -2,20 +2,25 @@ import 'dart:convert';
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:bouncing_button/bouncing_button.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_ar_app/auth.dart';
 import 'package:flutter_ar_app/firebasedb.dart';
 import 'package:flutter_ar_app/models/DBUser.dart';
+import 'package:flutter_ar_app/models/Group.dart';
 import 'package:flutter_ar_app/pages/ar_content_add_form.dart';
 import 'package:flutter_ar_app/pages/content_page.dart';
 import 'package:flutter_ar_app/pages/groups_page.dart';
 import 'package:flutter_ar_app/pages/profile_edit.dart';
 import 'package:flutter_ar_app/pages/role_request_modal.dart';
 import 'package:flutter_ar_app/pages/users_page.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:intl/intl.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../values/app_colors.dart';
+import 'group_members_page.dart';
 
 final User? user = Auth().currentUser;
 
@@ -72,7 +77,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
               );
             },
             child: Container(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
                 color: Colors.blue,
                 border: Border.all(
@@ -87,6 +92,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                     child: Icon(
                       Icons.person,
                       color: Colors.white,
+                      size: 28,
                     ),
                   ),
                   Expanded(
@@ -123,7 +129,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                         "${count}",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18
+                          fontSize: 22
                         )
                       ),
                       SizedBox(width: 7,),
@@ -160,7 +166,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
               );
             },
             child: Container(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
                 color: Colors.blue,
                 border: Border.all(
@@ -175,6 +181,8 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                     child: Icon(
                       Icons.groups,
                       color: Colors.white,
+                      size: 28,
+
                     ),
                   ),
                   Expanded(
@@ -211,7 +219,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                         "${count}",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18
+                          fontSize: 22
                         )
                       ),
                       SizedBox(width: 7,),
@@ -248,7 +256,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
               );
             },
             child: Container(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
                 color: Colors.deepOrange,
                 border: Border.all(
@@ -263,6 +271,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                     child: Icon(
                       Icons.perm_media_rounded,
                       color: Colors.white,
+                      size: 28,
                     ),
                   ),
                   Expanded(
@@ -299,7 +308,7 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
                         "${count}",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18
+                          fontSize: 22
                         )
                       ),
                       SizedBox(width: 7,),
@@ -339,24 +348,196 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
         // title: const Text('Admin', style: TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w500)), 
         ),
         backgroundColor: Color.fromARGB(255, 244, 242, 244),
-        body: Padding(
-        padding: EdgeInsets.all(12),
-        child: ListView(
-          children: [
-            _header(),
-            _usersInfo(),
-            SizedBox(height: 15,),
-            _groupsInfo(),
-            SizedBox(height: 15,),
-            _contentInfo(),
-          ],
-        ),
-      )), 
+        body: panelHeader()), 
       onRefresh:() async {
         setState(() {
           
         });
       },
+    );
+  }
+
+  Widget panelHeader() {
+    return Container(
+        width: double.infinity,
+        decoration: BoxDecoration(color: Colors.white), 
+        child: Padding(
+          padding: EdgeInsets.all(12),
+          child: ListView(
+            children: [
+              _header(),
+              _usersInfo(),
+              SizedBox(height: 15,),
+              _groupsInfo(),
+              SizedBox(height: 15,),
+              _contentInfo(),
+              SizedBox(height: 25,),
+              Padding(
+                padding: EdgeInsets.fromLTRB(15, 15, 0, 5),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Latest updates",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Color.fromARGB(255, 84, 84, 84)
+                    ),
+                  )
+                ),
+              ),
+              Card(
+                child: Container(
+                  height: 251,
+                  child: Padding(padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                    child: Column(children: [
+                      latestUser(),
+                      latestGroup(),
+                      latestContent(),
+                    ],))
+                ),
+              )
+              
+              
+            ],
+          ),
+        )
+      );
+  }
+
+  Widget latestUser(){
+    var ft = FirebaseDB().firebaseRTDB.ref('users').once();
+    return FutureBuilder(
+      future: ft, 
+      builder: (context, snapshot){
+        if(snapshot.hasData){
+          var user = snapshot.data!.snapshot.children.last;
+
+          return Card(
+            child: ListTile(
+              leading: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                    Icon(Icons.account_box, size: 30,),
+                ],
+              ),
+              title: Text(user.child("username").value.toString()),
+              subtitle: Text(user.child("email").value.toString()),
+              onTap: () {
+                
+              },
+            ),
+          );
+        }
+        return SizedBox(
+          child: Shimmer.fromColors(
+            baseColor: Colors.grey.shade300,
+            highlightColor: Colors.grey.shade100,
+            child: SizedBox(
+              child: const DecoratedBox(
+                decoration: const BoxDecoration(
+                  color: Colors.black
+                ),
+              ),
+            ),
+          ),
+        ); 
+      }
+    );
+  }
+
+  Widget latestGroup(){
+    var ft = FirebaseDB().firebaseRTDB.ref('groups').once();
+    return FutureBuilder(
+      future: ft, 
+      builder: (context, snapshot){
+        if(snapshot.hasData){
+          var group = snapshot.data!.snapshot.children.last;
+
+          return Card(
+            child: ListTile(
+              leading: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                    Icon(Icons.groups, size: 30,),
+                ],
+              ),
+              title: Text("${group.child("group_name").value.toString()}"),
+              subtitle: Text("${group.child("institution").value.toString()}"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GroupMembersPage(group:
+                      Group(
+                        id: group.key.toString(), 
+                        group_name: group.child("group_name").value.toString(),
+                        institution: group.child("institution").value.toString(),
+                      )
+                    )
+                  ),
+                );
+              },
+            ),
+          );
+        }
+        return SizedBox(
+          child: Shimmer.fromColors(
+            baseColor: Colors.grey.shade300,
+            highlightColor: Colors.grey.shade100,
+            child: SizedBox(
+              child: const DecoratedBox(
+                decoration: const BoxDecoration(
+                  color: Colors.black
+                ),
+              ),
+            ),
+          ),
+        ); 
+      }
+    );
+  }
+
+  Widget latestContent(){
+    var ft = FirebaseDB().firebaseRTDB.ref('content').once();
+    return FutureBuilder(
+      future: ft, 
+      builder: (context, snapshot){
+        if(snapshot.hasData){
+          var content = snapshot.data!.snapshot.children.last;
+
+          return Card(
+            child: ListTile(
+              leading: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                    Icon(Icons.image, size: 30,),
+                    
+                ],
+              ),
+              title: Text("${content.child("type").value == "video" ? "Video" : "3D Model"} №${content.child("img_name").value.toString().split(".")[0]}"),
+              // subtitle: Text("User: ${snapshotf.hasData ? snapshotf.data!.snapshot.children.firstWhere((x) => x.child("uid").value == snapshot.child("uid").value).child("username").value: ""}"),
+              subtitle: Text("File type: ${content.child("file_name").value.toString().split(".")[1]}"),
+              
+            ),
+          );
+        }
+        return SizedBox(
+          child: Shimmer.fromColors(
+            baseColor: Colors.grey.shade300,
+            highlightColor: Colors.grey.shade100,
+            child: SizedBox(
+              child: const DecoratedBox(
+                decoration: const BoxDecoration(
+                  color: Colors.black
+                ),
+              ),
+            ),
+          ),
+        ); 
+      }
     );
   }
 

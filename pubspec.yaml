@@ -37,11 +37,16 @@ dependencies:
   file_picker: ^5.3.1
   gallery_image_viewer: ^1.2.0
   video_player: ^2.7.2
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "assets/images/app_icon.png"
 
 flutter:
   uses-material-design: true
@@ -50,6 +55,7 @@ flutter:
     - assets/images/welcome.jpg
     - assets/images/bg.jpg
     - assets/images/default_avatar.png
+    - assets/images/app_icon.png
 
   fonts:
     - family: Poppins
