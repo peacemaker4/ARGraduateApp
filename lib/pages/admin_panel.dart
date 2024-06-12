@@ -79,10 +79,18 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
             child: Container(
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
-                color: Colors.blue,
+                gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 86, 177, 252),
+                  Colors.blue,
+                ],
+                begin: const FractionalOffset(0.0, 0.0),
+                end: const FractionalOffset(1.0, 0.0),
+                stops: [0.0, 1.0],
+                tileMode: TileMode.clamp),
                 border: Border.all(
                   width: 2, 
-                  color: Colors.blue,
+                  color: Colors.transparent,
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(15))
               ),
@@ -145,7 +153,81 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
             ),) ;
         }
         else{
-          return CircularProgressIndicator();
+          return SizedBox(
+            child: Shimmer.fromColors(
+              baseColor: Colors.grey.shade300,
+              highlightColor: Colors.grey.shade100,
+              
+            child: Container(
+              padding: EdgeInsets.all(25),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                border: Border.all(
+                  width: 2, 
+                  color: Colors.blue,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(15))
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    child: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                      size: 28,
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 22),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "",
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14
+                            ),
+                          ),
+                          Text(
+                            "",
+                            style: Theme.of(context)
+                              .textTheme
+                              .bodySmall!
+                              .copyWith(color: Colors.white70),
+                          ),
+                          
+                        ],
+                      )
+                    )
+                  ),
+                  Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Text(
+                        "",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22
+                        )
+                      ),
+                      SizedBox(width: 7,),
+                      Icon(
+                        Icons.circle,
+                        size: 7,
+                        color: Colors.white,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            )
+            ),
+          );
+          
         }
       });
   }
@@ -168,10 +250,18 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
             child: Container(
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
-                color: Colors.blue,
+                gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 86, 177, 252),
+                  Colors.blue,
+                ],
+                begin: const FractionalOffset(0.0, 0.0),
+                end: const FractionalOffset(1.0, 0.0),
+                stops: [0.0, 1.0],
+                tileMode: TileMode.clamp),
                 border: Border.all(
                   width: 2, 
-                  color: Colors.blue,
+                  color: Colors.transparent,
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(15))
               ),
@@ -235,7 +325,80 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
             ),) ;
         }
         else{
-          return CircularProgressIndicator();
+          return SizedBox(
+            child: Shimmer.fromColors(
+              baseColor: Colors.grey.shade300,
+              highlightColor: Colors.grey.shade100,
+              
+            child: Container(
+              padding: EdgeInsets.all(25),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                border: Border.all(
+                  width: 2, 
+                  color: Colors.blue,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(15))
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    child: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                      size: 28,
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 22),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "",
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14
+                            ),
+                          ),
+                          Text(
+                            "",
+                            style: Theme.of(context)
+                              .textTheme
+                              .bodySmall!
+                              .copyWith(color: Colors.white70),
+                          ),
+                          
+                        ],
+                      )
+                    )
+                  ),
+                  Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Text(
+                        "",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22
+                        )
+                      ),
+                      SizedBox(width: 7,),
+                      Icon(
+                        Icons.circle,
+                        size: 7,
+                        color: Colors.white,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            )
+            ),
+          );
         }
       });
   }
@@ -258,10 +421,18 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
             child: Container(
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
-                color: Colors.deepOrange,
+                gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 255, 114, 54),
+                  Colors.deepOrange,
+                ],
+                begin: const FractionalOffset(0.0, 0.0),
+                end: const FractionalOffset(1.0, 0.0),
+                stops: [0.0, 1.0],
+                tileMode: TileMode.clamp),
                 border: Border.all(
                   width: 2, 
-                  color: Colors.deepOrange,
+                  color: Colors.transparent,
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(15))
               ),
@@ -324,7 +495,80 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
             ),);
         }
         else{
-          return CircularProgressIndicator();
+          return SizedBox(
+            child: Shimmer.fromColors(
+              baseColor: Colors.grey.shade300,
+              highlightColor: Colors.grey.shade100,
+              
+            child: Container(
+              padding: EdgeInsets.all(25),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                border: Border.all(
+                  width: 2, 
+                  color: Colors.blue,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(15))
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    child: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                      size: 28,
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 22),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "",
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14
+                            ),
+                          ),
+                          Text(
+                            "",
+                            style: Theme.of(context)
+                              .textTheme
+                              .bodySmall!
+                              .copyWith(color: Colors.white70),
+                          ),
+                          
+                        ],
+                      )
+                    )
+                  ),
+                  Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Text(
+                        "",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22
+                        )
+                      ),
+                      SizedBox(width: 7,),
+                      Icon(
+                        Icons.circle,
+                        size: 7,
+                        color: Colors.white,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            )
+            ),
+          );
         }
       });
   }
@@ -412,8 +656,8 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
       builder: (context, snapshot){
         if(snapshot.hasData){
           var user = snapshot.data!.snapshot.children.last;
-
-          return Card(
+          if(user.exists){
+            return Card(
             child: ListTile(
               leading: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -429,6 +673,8 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
               },
             ),
           );
+          }
+          return SizedBox.shrink();
         }
         return SizedBox(
           child: Shimmer.fromColors(
@@ -455,7 +701,8 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
         if(snapshot.hasData){
           var group = snapshot.data!.snapshot.children.last;
 
-          return Card(
+          if(group.exists){
+            return Card(
             child: ListTile(
               leading: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -481,6 +728,8 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
               },
             ),
           );
+          }
+          return SizedBox.shrink();
         }
         return SizedBox(
           child: Shimmer.fromColors(
@@ -507,7 +756,8 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
         if(snapshot.hasData){
           var content = snapshot.data!.snapshot.children.last;
 
-          return Card(
+          if(content.exists){
+            return Card(
             child: ListTile(
               leading: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -523,6 +773,9 @@ class _AdminPanelPageState extends State<AdminPanelPage> with TickerProviderStat
               
             ),
           );
+          }
+          
+          return SizedBox.shrink();
         }
         return SizedBox(
           child: Shimmer.fromColors(

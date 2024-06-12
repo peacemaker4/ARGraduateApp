@@ -88,7 +88,7 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
             SizedBox(height: 5,),
             _selectImageButton(),
              _selectedImage(),
-            _selectedImagePreview(),
+            // _selectedImagePreview(),
             SizedBox(height: 5,),
             _selectContentType(),
             SizedBox(height: 5,),
@@ -97,7 +97,7 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
             SizedBox(height: 5,),
             switchValue ? _selectImageTextureButton() : SizedBox.shrink(),
             switchValue ? _selectedImageTexture() : SizedBox.shrink(),
-            switchValue ? _selectedImageTexturePreview() : SizedBox.shrink(),
+            // switchValue ? _selectedImageTexturePreview() : SizedBox.shrink(),
             SizedBox(height: 5,),
             _submitButton(),
           ],
@@ -273,7 +273,11 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                    Icon(Icons.image, color: AppColors.primaryColor, size: 30,),
+                    Image(
+                      width: 40,
+                      height: 40,
+                      image: MemoryImage(_image!))
+                    // Icon(Icons.image, color: AppColors.primaryColor, size: 30,),
                 ],
               ),
               title: Text("Image"),
@@ -291,7 +295,10 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
 
   Widget _selectedImagePreview(){
     if(_image != null){
-      return Center(child:Image(image: MemoryImage(_image!)));
+      return Center(child:
+      Image(
+        image: MemoryImage(_image!))
+      );
     }
     return SizedBox.shrink();
   }
@@ -530,7 +537,11 @@ class _ARContentAddFormPageState extends State<ARContentAddFormPage> with Ticker
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                    Icon(Icons.texture, color: AppColors.primaryColor, size: 30,),
+                  Image(
+                      width: 40,
+                      height: 40,
+                      image: MemoryImage(_image_texture!))
+                    // Icon(Icons.texture, color: AppColors.primaryColor, size: 30,),
                 ],
               ),
               title: Text("Texture"),
